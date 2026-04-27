@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Indi Travels the World</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light only}
+html,body{background:#f5f0e8!important;color:#0f0e0c!important}
+*{forced-color-adjust:none!important;box-sizing:border-box;margin:0;padding:0}
+@media(prefers-color-scheme:dark){
+  html,body,header,section,footer{background:#f5f0e8!important;color:#0f0e0c!important}
+  .hero-title,.hero-sub,.trips-label,.logo,.footer-text{color:#0f0e0c!important}
+  .hero-tag{background:#0f0e0c!important;color:#f5f0e8!important}
+  .trip-card.japan{background:#0f0e0c!important}
+  .japan .card-title{color:#fff!important}
+  .japan .card-subtitle{color:rgba(255,255,255,0.4)!important}
+  .japan .card-who{color:rgba(255,255,255,0.7)!important;background:rgba(255,255,255,0.1)!important}
+  .japan .card-year{color:rgba(255,255,255,0.5)!important;border-color:rgba(255,255,255,0.15)!important}
+  .japan .card-arrow{color:#fff!important}
+  .trip-card.denmark{background:#dff0ff!important}
+  .denmark .card-title{color:#0f0e0c!important}
+  .card-roulette{background:#0f0e0c!important}
+  .roulette-title{color:#fff!important}
+  .roulette-label,.roulette-sub{color:rgba(255,255,255,0.5)!important}
+  .roulette-modal{background:#f5f0e8!important;color:#0f0e0c!important}
+  .modal-title,.modal-sub,.btn-again{color:#0f0e0c!important}
+  .slot-display{background:#0f0e0c!important}
+}
+:root{
+  --bg:#f5f0e8;--ink:#0f0e0c;
+  --c1:#ff4d1c;--c2:#0047ff;--c3:#ffe600;--c4:#00c875;--c5:#ff1f8e;
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'Syne',sans-serif;
+  --body:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:#f5f0e8;color:#0f0e0c;font-family:var(--body);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:0.4;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E")}
+header{padding:28px 48px 0;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.38}
+.hero{padding:56px 48px 0;position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.blob-1{width:360px;height:360px;background:var(--c2);top:-80px;right:-60px;opacity:0.28}
+.blob-2{width:240px;height:240px;background:var(--c5);bottom:-30px;right:20%;opacity:0.15}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:26px}
+.dot-pulse{width:6px;height:6px;border-radius:50%;background:var(--c4);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.5);opacity:0.6}}
+.hero-title{font-family:var(--serif);font-size:clamp(50px,10vw,112px);font-weight:400;line-height:0.92;letter-spacing:-0.02em;margin-bottom:10px}
+.hero-title .l2{font-style:italic;color:var(--c1)}
+.hero-title .l3{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.badge-pill{display:inline-block;background:var(--c3);color:var(--ink);font-family:var(--sans);font-size:clamp(9px,1.3vw,13px);font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:6px 14px;border-radius:100px;transform:rotate(-2deg);position:relative;top:-5px}
+.hero-sub{font-family:var(--body);font-size:17px;font-weight:300;color:rgba(15,14,12,0.48);margin-top:26px;max-width:460px;line-height:1.65}
+.trips{padding:68px 48px 72px;position:relative}
+.trips-label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(15,14,12,0.32);margin-bottom:36px;display:flex;align-items:center;gap:12px}
+.trips-label::after{content:'';flex:1;height:1px;background:rgba(15,14,12,0.1)}
+.trips-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.trip-card{position:relative;border-radius:20px;overflow:hidden;text-decoration:none;display:block;min-height:360px;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+.trip-card.active:hover{transform:translateY(-8px) rotate(0.4deg)}
+.trip-card.active:hover .c-arrow{transform:translate(4px,-4px)}
+.trip-card.inactive{cursor:not-allowed}
+.trip-card.japan{background:#0f0e0c}
+.japan .card-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(255,77,28,0.4) 0%,transparent 58%),radial-gradient(ellipse at 20% 80%,rgba(0,71,255,0.3) 0%,transparent 50%),#0f0e0c}
+.japan .card-pat{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.02) 0px,rgba(255,255,255,0.02) 1px,transparent 1px,transparent 20px)}
+.trip-card.denmark{background:#dff0ff}
+.denmark .card-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 30%,rgba(0,71,255,0.15) 0%,transparent 58%),radial-gradient(ellipse at 80% 70%,rgba(255,30,142,0.12) 0%,transparent 50%),#dff0ff}
+.denmark .card-pat{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,71,255,0.08) 1px,transparent 1px);background-size:24px 24px}
+.c-inner{position:relative;z-index:2;padding:34px 34px 30px;display:flex;flex-direction:column;justify-content:space-between;min-height:360px}
+.c-top{display:flex;justify-content:space-between;align-items:flex-start}
+.c-year{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:4px 11px;border-radius:100px;border:1px solid}
+.japan .c-year{color:rgba(255,255,255,0.45);border-color:rgba(255,255,255,0.12)}
+.denmark .c-year{color:rgba(0,71,255,0.55);border-color:rgba(0,71,255,0.18)}
+.c-arrow{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;transition:transform 0.3s ease}
+.japan .c-arrow{background:rgba(255,255,255,0.1);color:#fff}
+.denmark .c-arrow{background:rgba(0,71,255,0.1);color:var(--c2)}
+.c-sub{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px}
+.japan .c-sub{color:rgba(255,255,255,0.36)}
+.denmark .c-sub{color:rgba(0,71,255,0.45)}
+.c-title{font-family:var(--serif);font-size:clamp(34px,4.5vw,54px);font-weight:400;line-height:0.94;letter-spacing:-0.02em;margin-bottom:14px}
+.japan .c-title{color:#fff}
+.denmark .c-title{color:var(--ink)}
+.c-title em{font-style:italic}
+.c-who{display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:5px 13px;border-radius:100px}
+.japan .c-who{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.65)}
+.denmark .c-who{background:rgba(0,71,255,0.08);color:rgba(0,71,255,0.65)}
+.c-dot{width:5px;height:5px;border-radius:50%}
+.japan .c-dot{background:var(--c4)}
+.denmark .c-dot{background:var(--c5)}
+.c-float{position:absolute;font-family:var(--sans);font-weight:800;pointer-events:none;user-select:none;line-height:1;bottom:12px;right:12px;font-size:clamp(64px,10vw,130px)}
+.japan .c-float{color:rgba(255,255,255,0.035)}
+.denmark .c-float{color:rgba(0,71,255,0.045)}
+.c-sticker{position:absolute;width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;top:50%;right:26px;z-index:3;animation:ststick 20s linear infinite}
+@keyframes ststick{from{transform:translateY(-50%) rotate(0)}to{transform:translateY(-50%) rotate(360deg)}}
+.japan .c-sticker{background:var(--c1)}
+.denmark .c-sticker{background:var(--c3)}
+.inactive-lbl{position:absolute;top:13px;left:50%;transform:translateX(-50%);background:rgba(15,14,12,0.52);color:#fff;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:100px;z-index:10;white-space:nowrap}
+/* ROULETTE CARD */
+.card-roulette{border-radius:20px;background:#0f0e0c;position:relative;overflow:hidden;grid-column:1/-1;min-height:180px;display:flex;align-items:center;justify-content:space-between;padding:40px 46px;gap:28px}
+.card-roulette::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(255,230,0,0.13) 0%,transparent 55%),radial-gradient(ellipse at 80% 50%,rgba(0,200,117,0.1) 0%,transparent 50%);pointer-events:none}
+.rl-left{position:relative;z-index:2}
+.rl-label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:9px}
+.rl-title{font-family:var(--serif);font-size:clamp(24px,3.8vw,42px);color:#fff;font-style:italic;line-height:1;margin-bottom:3px}
+.rl-sub{font-family:var(--body);font-size:14px;color:rgba(255,255,255,0.35);margin-top:7px}
+.rl-btn{position:relative;z-index:2;flex-shrink:0;background:var(--c3);color:var(--ink);font-family:var(--sans);font-size:13px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:15px 30px;border-radius:100px;border:none;cursor:pointer;transition:transform 0.2s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.2s;box-shadow:0 4px 24px rgba(255,230,0,0.35)}
+.rl-btn:hover{transform:scale(1.06);box-shadow:0 8px 32px rgba(255,230,0,0.55)}
+.rl-btn:active{transform:scale(0.97)}
+/* MODAL */
+.modal-ov{position:fixed;inset:0;background:rgba(15,14,12,0.7);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-ov.open{display:flex}
+.modal-box{background:#f5f0e8;color:#0f0e0c;border-radius:22px;padding:44px 38px 38px;max-width:440px;width:100%;position:relative;animation:mIn 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+@keyframes mIn{from{opacity:0;transform:scale(0.8) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.m-close{position:absolute;top:14px;right:14px;background:rgba(15,14,12,0.08);border:none;cursor:pointer;width:34px;height:34px;border-radius:50%;font-size:15px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;color:#0f0e0c}
+.m-close:hover{background:rgba(15,14,12,0.16)}
+.m-title{font-family:var(--serif);font-size:28px;font-style:italic;margin-bottom:5px;line-height:1.1;color:#0f0e0c}
+.m-sub{font-family:var(--body);font-size:13px;color:rgba(15,14,12,0.42);margin-bottom:24px;line-height:1.5}
+.slot{background:#0f0e0c;border-radius:14px;padding:26px 22px;margin-bottom:18px;text-align:center;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.slot-idle{font-family:var(--serif);font-size:20px;font-style:italic;color:rgba(255,255,255,0.25)}
+.slot-flag{font-size:44px;line-height:1;margin-bottom:7px;transition:transform 0.1s}
+.slot-country{font-family:var(--sans);font-size:19px;font-weight:700;color:#fff}
+.slot-region{font-family:var(--body);font-size:11px;color:rgba(255,255,255,0.35);margin-top:3px}
+.spinning .slot-flag{animation:ss 0.09s linear infinite}
+@keyframes ss{0%{transform:translateY(-4px) scale(0.88);opacity:0.5}50%{transform:scale(1.12);opacity:1}100%{transform:translateY(4px) scale(0.88);opacity:0.5}}
+.m-actions{display:flex;gap:10px}
+.btn-spin{flex:1;background:var(--c1);color:#fff;font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:13px 22px;border-radius:100px;border:none;cursor:pointer;transition:transform 0.2s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.2s;box-shadow:0 4px 18px rgba(255,77,28,0.3)}
+.btn-spin:hover{transform:scale(1.04);box-shadow:0 6px 26px rgba(255,77,28,0.5)}
+.btn-spin:disabled{opacity:0.4;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-again{background:rgba(15,14,12,0.08);color:#0f0e0c;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;padding:13px 18px;border-radius:100px;border:none;cursor:pointer;transition:background 0.2s}
+.btn-again:hover{background:rgba(15,14,12,0.15)}
+footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(15,14,12,0.07)}
+.ft{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(15,14,12,0.22)}
+.ft-dot{width:7px;height:7px;border-radius:50%;background:var(--c4);animation:pulse 2s ease-in-out infinite}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.hero-tag{animation:fadeUp 0.6s ease both 0.1s}
+.hero-title{animation:fadeUp 0.7s ease both 0.2s}
+.hero-sub{animation:fadeUp 0.7s ease both 0.32s}
+.trips-label{animation:fadeUp 0.6s ease both 0.42s}
+.trip-card:nth-child(1){animation:fadeUp 0.7s ease both 0.5s}
+.trip-card:nth-child(2){animation:fadeUp 0.7s ease both 0.62s}
+.card-roulette{animation:fadeUp 0.7s ease both 0.74s}
+.cursor-glow{width:260px;height:260px;background:radial-gradient(circle,rgba(255,77,28,0.07) 0%,transparent 70%);border-radius:50%;position:fixed;pointer-events:none;transform:translate(-50%,-50%);transition:left 0.12s ease,top 0.12s ease,background 0.3s ease;z-index:998;mix-blend-mode:multiply}
+@media(max-width:768px){
+  header{padding:22px 22px 0}
+  .hero{padding:40px 22px 0}
+  .trips{padding:44px 22px 60px}
+  .trips-grid{grid-template-columns:1fr;gap:14px}
+  .c-inner{padding:26px 26px 24px;min-height:280px}
+  .card-roulette{flex-direction:column;padding:32px 26px;text-align:center;min-height:auto}
+  .rl-btn{width:100%}
+  footer{padding:22px;flex-direction:column;gap:10px;text-align:center}
+  .modal-box{padding:34px 22px 26px}
+  .m-actions{flex-direction:column}
+  .c-sticker{width:56px;height:56px;font-size:22px;right:16px}
+}
+@media(max-width:480px){
+  header{padding:18px 18px 0}
+  .hero{padding:32px 18px 0}
+  .trips{padding:32px 18px 44px}
+  .c-inner{padding:20px 20px 18px;min-height:250px}
+  .c-sticker{display:none}
+}
+</style>
+</head>
+<body>
+<div class="cursor-glow" id="glow"></div>
+<header><div class="logo">Indi Travels the World</div></header>
+<section class="hero">
+  <div class="blob blob-1"></div><div class="blob blob-2"></div>
+  <div class="hero-tag"><span class="dot-pulse"></span>Diarios de viaje</div>
+  <h1 class="hero-title">
+    <span>Indi</span><br>
+    <span class="l2">Travels</span><br>
+    <span class="l3">the World <span class="badge-pill">✈ en curso</span></span>
+  </h1>
+  <p class="hero-sub">Viajes reales, sin filtro. Cada destino con su propia historia.</p>
+</section>
+<section class="trips">
+  <div class="trips-label">Viajes</div>
+  <div class="trips-grid">
+
+    <!--
+    ══════════════════════════════════════════════
+    TARJETA JAPÓN — CÓMO EDITAR EN GITHUB:
+    · Para cambiar la URL: edita href="./japon-2026/index.html"
+    · Para desactivar: cambia "active" por "inactive" en el class
+    ══════════════════════════════════════════════
+    -->
+    <a class="trip-card japan active" href="./japon-2026/index.html">
+      <div class="card-bg"></div><div class="card-pat"></div>
+      <div class="c-float">JP</div>
+      <div class="c-sticker">🗾</div>
+      <div class="c-inner">
+        <div class="c-top"><span class="c-year">Agosto 2026</span><span class="c-arrow">↗</span></div>
+        <div><div class="c-sub">Destino</div><div class="c-title">Japón<br><em>2026</em></div><div class="c-who"><span class="c-dot"></span>Indalecio</div></div>
+      </div>
+    </a>
+
+    <!--
+    ══════════════════════════════════════════════
+    TARJETA DINAMARCA — CÓMO ACTIVAR CUANDO ESTÉ LISTA:
+    1. Cambia "inactive" por "active" en el class
+    2. Cambia href="#proximamente" por la URL real, ej: href="./dinamarca-2026/index.html"
+    3. Borra la línea: onclick="return false;"
+    ══════════════════════════════════════════════
+    -->
+    <a class="trip-card denmark inactive" href="#proximamente" onclick="return false;">
+      <div class="card-bg"></div><div class="card-pat"></div>
+      <div class="c-float">DK</div>
+      <div class="c-sticker">🇩🇰</div>
+      <div class="inactive-lbl">Próximamente</div>
+      <div class="c-inner">
+        <div class="c-top"><span class="c-year">Agosto 2026</span><span class="c-arrow" style="opacity:0.28">↗</span></div>
+        <div><div class="c-sub">Próximamente</div><div class="c-title">Dina<br><em>marca</em></div><div class="c-who"><span class="c-dot"></span>Trio Lalala</div></div>
+      </div>
+    </a>
+
+    <div class="card-roulette">
+      <div class="rl-left">
+        <div class="rl-label">Tu próximo destino</div>
+        <div class="rl-title">¿A dónde vamos?</div>
+        <div class="rl-sub">Deja que el mundo decida por ti</div>
+      </div>
+      <button class="rl-btn" onclick="openRoulette()">🎲 Girar la ruleta</button>
+    </div>
+  </div>
+</section>
+<footer><span class="ft">Indi Travels the World · 2026</span><span class="ft-dot"></span></footer>
+
+<div class="modal-ov" id="modalOv" onclick="closeBd(event)">
+  <div class="modal-box">
+    <button class="m-close" onclick="closeR()">✕</button>
+    <div class="m-title">Ruleta de destinos</div>
+    <p class="m-sub">Gira y descubre tu próximo viaje. El mundo entero a un clic.</p>
+    <div class="slot" id="slot">
+      <div class="slot-idle" id="sIdle">Pulsa girar ↓</div>
+      <div id="sRes" style="display:none">
+        <div class="slot-flag" id="sFlag"></div>
+        <div class="slot-country" id="sCty"></div>
+        <div class="slot-region" id="sReg"></div>
+      </div>
+    </div>
+    <div class="m-actions">
+      <button class="btn-spin" id="bSpin" onclick="spin()">🎲 Girar</button>
+      <button class="btn-again" id="bAgain" onclick="spin()" style="display:none">Otra vez</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const D=[
+  {f:"🇫🇷",n:"Francia",r:"París, Provenza, Costa Azul, Bretaña",w:5},{f:"🇮🇹",n:"Italia",r:"Roma, Florencia, Sicilia, Amalfi, Venecia",w:5},
+  {f:"🇪🇸",n:"España",r:"Madrid, Barcelona, Sevilla, Norte, Islas",w:5},{f:"🇵🇹",n:"Portugal",r:"Lisboa, Oporto, Alentejo, Azores, Algarve",w:5},
+  {f:"🇬🇷",n:"Grecia",r:"Atenas, Santorini, Creta, Meteora, Rodas",w:5},{f:"🇬🇧",n:"Reino Unido",r:"Londres, Escocia, Gales, Cotswolds",w:4},
+  {f:"🇨🇭",n:"Suiza",r:"Alpes, Ginebra, Berna, Zermatt, Lucerna",w:4},{f:"🇦🇹",n:"Austria",r:"Viena, Salzburgo, Tirol, Hallstatt",w:4},
+  {f:"🇳🇱",n:"Países Bajos",r:"Ámsterdam, Rotterdam, Delft, Tulipanes",w:4},{f:"🇧🇪",n:"Bélgica",r:"Bruselas, Brujas, Gante, Lieja",w:4},
+  {f:"🇩🇰",n:"Dinamarca",r:"Copenhague, Jutlandia, Bornholm, Faroe",w:4},{f:"🇸🇪",n:"Suecia",r:"Estocolmo, Gotemburgo, Laponia, Öland",w:4},
+  {f:"🇳🇴",n:"Noruega",r:"Fiordos, Bergen, Tromsø, Oslo, Lofoten",w:4},{f:"🇫🇮",n:"Finlandia",r:"Helsinki, Laponia, Lagos, Aurora Boreal",w:4},
+  {f:"🇮🇸",n:"Islandia",r:"Reikiavik, Aurora Boreal, Glaciares, Geiseres",w:4},{f:"🇵🇱",n:"Polonia",r:"Cracovia, Varsovia, Gdansk, Tatras, Wroclaw",w:4},
+  {f:"🇨🇿",n:"Rep. Checa",r:"Praga, Ceský Krumlov, Brno, Bohemia",w:4},{f:"🇭🇺",n:"Hungría",r:"Budapest, Lago Balatón, Eger, Pécs",w:4},
+  {f:"🇭🇷",n:"Croacia",r:"Dubrovnik, Split, Plitvice, Hvar, Korčula",w:4},{f:"🇸🇮",n:"Eslovenia",r:"Ljubljana, Lago Bled, Triglav, Piran",w:4},
+  {f:"🇮🇪",n:"Irlanda",r:"Dublín, Cliff of Moher, Galway, Wild Atlantic",w:3},{f:"🇷🇴",n:"Rumanía",r:"Transilvania, Bucarest, Maramures, Sibiu",w:3},
+  {f:"🇧🇬",n:"Bulgaria",r:"Sofía, Plovdiv, Costa del Mar Negro, Rila",w:3},{f:"🇷🇸",n:"Serbia",r:"Belgrado, Novi Sad, Uvac Canyon",w:3},
+  {f:"🇲🇪",n:"Montenegro",r:"Kotor, Budva, Parque Durmitor",w:3},{f:"🇦🇱",n:"Albania",r:"Riviera Albanesa, Gjirokastër, Berat",w:3},
+  {f:"🇧🇦",n:"Bosnia y Herzegovina",r:"Sarajevo, Mostar, Blagaj",w:3},{f:"🇱🇹",n:"Lituania",r:"Vilna, Trakai, Curonian Spit",w:3},
+  {f:"🇱🇻",n:"Letonia",r:"Riga, Sigulda, Cabo Kolka, Jūrmala",w:3},{f:"🇪🇪",n:"Estonia",r:"Tallin, Pärnu, Isla Saaremaa",w:3},
+  {f:"🇲🇹",n:"Malta",r:"La Valeta, Gozo, Mar Mediterráneo, Mdina",w:3},{f:"🇸🇰",n:"Eslovaquia",r:"Bratislava, Altos Tatras, Košice",w:3},
+  {f:"🇯🇵",n:"Japón",r:"Tokio, Kioto, Osaka, Hokkaido, Hiroshima",w:5},{f:"🇹🇭",n:"Tailandia",r:"Bangkok, Chiang Mai, Phuket, Pai, Koh Tao",w:5},
+  {f:"🇻🇳",n:"Vietnam",r:"Hanói, Ho Chi Minh, Hội An, Ha Long Bay",w:5},{f:"🇮🇩",n:"Indonesia",r:"Bali, Lombok, Yogyakarta, Raja Ampat",w:5},
+  {f:"🇰🇷",n:"Corea del Sur",r:"Seúl, Busan, Jeju, Gyeongju, DMZ",w:5},{f:"🇸🇬",n:"Singapur",r:"Ciudad-Estado, Marina Bay, Hawker Centers",w:4},
+  {f:"🇲🇾",n:"Malasia",r:"Kuala Lumpur, Borneo, Langkawi, Penang",w:4},{f:"🇵🇭",n:"Filipinas",r:"Palawan, Siargao, Boracay, Manila",w:4},
+  {f:"🇹🇼",n:"Taiwán",r:"Taipei, Taroko, Sun Moon Lake, Jiufen",w:4},{f:"🇮🇳",n:"India",r:"Rajastán, Kerala, Goa, Himalaya, Varanasi",w:4},
+  {f:"🇳🇵",n:"Nepal",r:"Katmandú, Everest, Pokhara, Chitwan",w:4},{f:"🇸🇷",n:"Sri Lanka",r:"Colombo, Kandy, Ella, Sigiriya, Playas",w:4},
+  {f:"🇲🇻",n:"Maldivas",r:"Atolones, Overwater Bungalows, Buceo",w:4},{f:"🇬🇪",n:"Georgia",r:"Tiflis, Kazbegi, Kutaisi, Svaneti, Kakheti",w:4},
+  {f:"🇯🇴",n:"Jordania",r:"Petra, Wadi Rum, Mar Muerto, Aqaba",w:4},{f:"🇴🇲",n:"Omán",r:"Mascate, Wahiba Sands, Fiordos, Nizwa",w:4},
+  {f:"🇦🇪",n:"Emiratos Árabes",r:"Dubái, Abu Dabi, Desert Safari",w:4},{f:"🇰🇭",n:"Camboya",r:"Angkor Wat, Siem Reap, Phnom Penh",w:4},
+  {f:"🇲🇲",n:"Myanmar",r:"Bagan, Lago Inle, Mandalay, Ngapali",w:3},{f:"🇱🇦",n:"Laos",r:"Luang Prabang, Vang Vieng, 4000 islas",w:3},
+  {f:"🇧🇹",n:"Bután",r:"Timbu, Tiger Nest, Punakha, Paro",w:3},{f:"🇺🇿",n:"Uzbekistán",r:"Samarcanda, Bujará, Khiva, Ruta de la Seda",w:3},
+  {f:"🇦🇲",n:"Armenia",r:"Ereván, Monasterios, Monte Ararat",w:3},{f:"🇦🇿",n:"Azerbaiyán",r:"Bakú, Gobustan, Fuego eterno, Sheki",w:3},
+  {f:"🇮🇱",n:"Israel",r:"Jerusalén, Tel Aviv, Negev, Mar de Galilea",w:3},{f:"🇶🇦",n:"Catar",r:"Doha, Desierto, Souq Waqif, Arquitectura",w:3},
+  {f:"🇲🇳",n:"Mongolia",r:"Ulán Bator, Desierto de Gobi, Yurtas, Khövsgöl",w:3},{f:"🇲🇦",n:"Marruecos",r:"Marrakech, Fez, Sahara, Essaouira, Chefchaouen",w:5},
+  {f:"🇪🇬",n:"Egipto",r:"El Cairo, Luxor, Aswan, Hurghada, Dahab",w:4},{f:"🇹🇳",n:"Túnez",r:"Túnez, Sidi Bou Said, Desierto, Djerba",w:3},
+  {f:"🇿🇦",n:"Sudáfrica",r:"Ciudad del Cabo, Kruger, Johannesburgo, Winelands",w:4},{f:"🇹🇿",n:"Tanzania",r:"Serengeti, Kilimanjaro, Zanzíbar, Ngorongoro",w:4},
+  {f:"🇰🇪",n:"Kenia",r:"Masai Mara, Nairobi, Lamu, Amboseli, Playas",w:4},{f:"🇷🇼",n:"Ruanda",r:"Kigali, Gorilas de montaña, Volcanes, Akagera",w:3},
+  {f:"🇳🇦",n:"Namibia",r:"Desierto de Namib, Sossusvlei, Etosha, Fish River",w:3},{f:"🇧🇼",n:"Botsuana",r:"Delta del Okavango, Chobe, Kalahari",w:3},
+  {f:"🇲🇬",n:"Madagascar",r:"Lémures, Baobabs, Tsaranoro, Isalo, Nosy Be",w:3},{f:"🇸🇨",n:"Seychelles",r:"Praslin, La Digue, Mahé, Playas de granito",w:3},
+  {f:"🇨🇻",n:"Cabo Verde",r:"São Vicente, Santiago, Boa Vista, Sal",w:3},{f:"🇲🇺",n:"Mauricio",r:"Playas, Port Louis, Chamarel, Naturaleza",w:3},
+  {f:"🇺🇸",n:"Estados Unidos",r:"Nueva York, Costa Oeste, Parques Nacionales, Miami",w:5},{f:"🇲🇽",n:"México",r:"CDMX, Oaxaca, Yucatán, Baja California",w:5},
+  {f:"🇨🇴",n:"Colombia",r:"Bogotá, Cartagena, Medellín, Eje Cafetero, Tayrona",w:5},{f:"🇵🇪",n:"Perú",r:"Lima, Cusco, Machu Picchu, Amazonia, Titicaca",w:5},
+  {f:"🇦🇷",n:"Argentina",r:"Buenos Aires, Patagonia, Mendoza, Bariloche, Iguazú",w:5},{f:"🇨🇱",n:"Chile",r:"Santiago, Atacama, Torres del Paine, Chiloé",w:4},
+  {f:"🇧🇷",n:"Brasil",r:"Río, São Paulo, Amazonia, Florianópolis, Pantanal",w:4},{f:"🇪🇨",n:"Ecuador",r:"Quito, Galápagos, Amazonia, Cotopaxi",w:4},
+  {f:"🇧🇴",n:"Bolivia",r:"Salar de Uyuni, La Paz, Titicaca, Sucre",w:4},{f:"🇨🇷",n:"Costa Rica",r:"Volcanes, Playas, Arenal, Tortuguero, Monteverde",w:4},
+  {f:"🇵🇦",n:"Panamá",r:"Ciudad de Panamá, Canal, Bocas del Toro, San Blas",w:4},{f:"🇬🇹",n:"Guatemala",r:"Antigua, Lago Atitlán, Tikal, Livingston",w:4},
+  {f:"🇨🇺",n:"Cuba",r:"La Habana, Trinidad, Viñales, Santiago",w:4},{f:"🇩🇴",n:"Rep. Dominicana",r:"Punta Cana, Santo Domingo, Samaná",w:4},
+  {f:"🇨🇦",n:"Canadá",r:"Vancouver, Montreal, Rockies, Niágara, Québec",w:4},{f:"🇺🇾",n:"Uruguay",r:"Montevideo, Punta del Este, Colonia, Cabo Polonio",w:3},
+  {f:"🇵🇷",n:"Puerto Rico",r:"San Juan, El Yunque, Vieques, Culebra",w:3},{f:"🇯🇲",n:"Jamaica",r:"Montego Bay, Negril, Blue Mountains, Ocho Ríos",w:3},
+  {f:"🇧🇿",n:"Belice",r:"Gran Barrera de Coral, Cahal Pech, Caye Caulker",w:3},{f:"🇳🇮",n:"Nicaragua",r:"Granada, Ometepe, San Juan del Sur, León",w:3},
+  {f:"🇭🇳",n:"Honduras",r:"Roatán, Copán, Utila, Pico Bonito",w:3},{f:"🇦🇺",n:"Australia",r:"Sídney, Melbourne, Gran Barrera, Outback, Tasmania",w:4},
+  {f:"🇳🇿",n:"Nueva Zelanda",r:"Auckland, Fiordland, Hobbiton, Queenstown",w:4},{f:"🇫🇯",n:"Fiyi",r:"Archipiélago, Coral Coast, Taveuni, Yasawa",w:3},
+  {f:"🇵🇫",n:"Polinesia Francesa",r:"Bora Bora, Moorea, Tahití, Fakarava",w:3}
+];
+function wRand(a){const t=a.reduce((s,d)=>s+(d.w||1),0);let r=Math.random()*t;for(const d of a){r-=(d.w||1);if(r<=0)return d;}return a[a.length-1];}
+let spin_on=false,stimer=null;
+function openRoulette(){document.getElementById("modalOv").classList.add("open");document.body.style.overflow="hidden";}
+function closeR(){document.getElementById("modalOv").classList.remove("open");document.body.style.overflow="";clearInterval(stimer);spin_on=false;resetS();}
+function closeBd(e){if(e.target===document.getElementById("modalOv"))closeR();}
+function resetS(){document.getElementById("sIdle").style.display="block";document.getElementById("sRes").style.display="none";document.getElementById("slot").classList.remove("spinning");const bs=document.getElementById("bSpin");bs.style.display="block";bs.disabled=false;document.getElementById("bAgain").style.display="none";}
+function spin(){
+  if(spin_on)return;spin_on=true;
+  const slot=document.getElementById("slot"),idle=document.getElementById("sIdle"),res=document.getElementById("sRes");
+  const fl=document.getElementById("sFlag"),ct=document.getElementById("sCty"),rg=document.getElementById("sReg");
+  const bs=document.getElementById("bSpin"),ba=document.getElementById("bAgain");
+  idle.style.display="none";res.style.display="block";slot.classList.add("spinning");bs.disabled=true;ba.style.display="none";
+  let c=0,tot=26+Math.floor(Math.random()*18);
+  stimer=setInterval(()=>{
+    const d=wRand(D);fl.textContent=d.f;ct.textContent=d.n;rg.textContent=d.r;c++;
+    if(c>=tot){clearInterval(stimer);slot.classList.remove("spinning");const fd=wRand(D);fl.textContent=fd.f;ct.textContent=fd.n;rg.textContent=fd.r;fl.style.transform="scale(1.25)";setTimeout(()=>{fl.style.transform=""},280);bs.style.display="none";ba.style.display="block";spin_on=false;}
+  },88);
+}
+const glow=document.getElementById("glow");
+document.addEventListener("mousemove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px";});
+document.querySelectorAll(".trip-card").forEach(c=>{
+  c.addEventListener("mouseenter",()=>{glow.style.background=c.classList.contains("japan")?"radial-gradient(circle,rgba(255,77,28,0.1) 0%,transparent 70%)":"radial-gradient(circle,rgba(0,71,255,0.08) 0%,transparent 70%)";});
+  c.addEventListener("mouseleave",()=>{glow.style.background="radial-gradient(circle,rgba(255,77,28,0.06) 0%,transparent 70%)";});
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeR();});
+</script>
+</body>
+</html>
