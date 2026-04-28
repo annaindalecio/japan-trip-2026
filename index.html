@@ -14,7 +14,7 @@ html,body{background:#f5f0e8!important;color:#0f0e0c!important}
   html,body,header,section,footer{background:#f5f0e8!important;color:#0f0e0c!important}
   .hero-title,.hero-sub,.trips-label,.logo,.footer-text{color:#0f0e0c!important}
   .hero-tag{background:#0f0e0c!important;color:#f5f0e8!important}
-  .trip-card.japan{background:#0f0e0c!important}
+  .trip-card.japan{background:#1a1f3a!important}
   .japan .card-title{color:#fff!important}
   .japan .card-subtitle{color:rgba(255,255,255,0.4)!important}
   .japan .card-who{color:rgba(255,255,255,0.7)!important;background:rgba(255,255,255,0.1)!important}
@@ -22,9 +22,9 @@ html,body{background:#f5f0e8!important;color:#0f0e0c!important}
   .japan .card-arrow{color:#fff!important}
   .trip-card.denmark{background:#dff0ff!important}
   .denmark .card-title{color:#0f0e0c!important}
-  .card-roulette{background:#0f0e0c!important}
-  .roulette-title{color:#fff!important}
-  .roulette-label,.roulette-sub{color:rgba(255,255,255,0.5)!important}
+  .card-roulette{background:linear-gradient(135deg,#fff5d6 0%,#ffe8f0 50%,#e8f4ff 100%)!important;border:2px solid rgba(15,14,12,0.08)!important}
+  .roulette-title{color:#0f0e0c!important}
+  .roulette-label,.roulette-sub{color:rgba(15,14,12,0.45)!important}
   .roulette-modal{background:#f5f0e8!important;color:#0f0e0c!important}
   .modal-title,.modal-sub,.btn-again{color:#0f0e0c!important}
   .slot-display{background:#0f0e0c!important}
@@ -61,9 +61,9 @@ header{padding:28px 48px 0;display:flex;justify-content:space-between;align-item
 .trip-card{position:relative;border-radius:20px;overflow:hidden;text-decoration:none;display:block;min-height:360px;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1)}
 .trip-card.active:hover{transform:translateY(-8px) rotate(0.4deg)}
 .trip-card.active:hover .c-arrow{transform:translate(4px,-4px)}
-.trip-card.inactive{cursor:not-allowed}
+.trip-card.inactive{cursor:not-allowed}.trip-card.active{cursor:pointer}
 .trip-card.japan{background:#0f0e0c}
-.japan .card-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(255,77,28,0.4) 0%,transparent 58%),radial-gradient(ellipse at 20% 80%,rgba(0,71,255,0.3) 0%,transparent 50%),#0f0e0c}
+.japan .card-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 75% 20%,rgba(220,100,140,0.35) 0%,transparent 55%),radial-gradient(ellipse at 20% 85%,rgba(100,140,220,0.25) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(200,163,90,0.1) 0%,transparent 70%),#1a1f3a}
 .japan .card-pat{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.02) 0px,rgba(255,255,255,0.02) 1px,transparent 1px,transparent 20px)}
 .trip-card.denmark{background:#dff0ff}
 .denmark .card-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 30%,rgba(0,71,255,0.15) 0%,transparent 58%),radial-gradient(ellipse at 80% 70%,rgba(255,30,142,0.12) 0%,transparent 50%),#dff0ff}
@@ -98,12 +98,12 @@ header{padding:28px 48px 0;display:flex;justify-content:space-between;align-item
 .denmark .c-sticker{background:var(--c3)}
 .inactive-lbl{position:absolute;top:13px;left:50%;transform:translateX(-50%);background:rgba(15,14,12,0.52);color:#fff;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:100px;z-index:10;white-space:nowrap}
 /* ROULETTE CARD */
-.card-roulette{border-radius:20px;background:#0f0e0c;position:relative;overflow:hidden;grid-column:1/-1;min-height:180px;display:flex;align-items:center;justify-content:space-between;padding:40px 46px;gap:28px}
-.card-roulette::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(255,230,0,0.13) 0%,transparent 55%),radial-gradient(ellipse at 80% 50%,rgba(0,200,117,0.1) 0%,transparent 50%);pointer-events:none}
+.card-roulette{border-radius:20px;background:linear-gradient(135deg,#fff5d6 0%,#ffe8f0 50%,#e8f4ff 100%);position:relative;overflow:hidden;grid-column:1/-1;min-height:180px;display:flex;align-items:center;justify-content:space-between;padding:40px 46px;gap:28px;border:2px solid rgba(15,14,12,0.08)}
+.card-roulette::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 10% 50%,rgba(255,77,28,0.08) 0%,transparent 55%),radial-gradient(ellipse at 90% 50%,rgba(0,71,255,0.06) 0%,transparent 50%);pointer-events:none}
 .rl-left{position:relative;z-index:2}
-.rl-label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:9px}
-.rl-title{font-family:var(--serif);font-size:clamp(24px,3.8vw,42px);color:#fff;font-style:italic;line-height:1;margin-bottom:3px}
-.rl-sub{font-family:var(--body);font-size:14px;color:rgba(255,255,255,0.35);margin-top:7px}
+.rl-label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(15,14,12,0.38);margin-bottom:9px}
+.rl-title{font-family:var(--serif);font-size:clamp(24px,3.8vw,42px);color:var(--ink);font-style:italic;line-height:1;margin-bottom:3px}
+.rl-sub{font-family:var(--body);font-size:14px;color:rgba(15,14,12,0.45);margin-top:7px}
 .rl-btn{position:relative;z-index:2;flex-shrink:0;background:var(--c3);color:var(--ink);font-family:var(--sans);font-size:13px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:15px 30px;border-radius:100px;border:none;cursor:pointer;transition:transform 0.2s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.2s;box-shadow:0 4px 24px rgba(255,230,0,0.35)}
 .rl-btn:hover{transform:scale(1.06);box-shadow:0 8px 32px rgba(255,230,0,0.55)}
 .rl-btn:active{transform:scale(0.97)}
@@ -174,7 +174,6 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
     <span class="l2">Travels</span><br>
     <span class="l3">the World <span class="badge-pill">✈ en curso</span></span>
   </h1>
-  <p class="hero-sub">Viajes reales, sin filtro. Cada destino con su propia historia.</p>
 </section>
 <section class="trips">
   <div class="trips-label">Viajes</div>
@@ -202,17 +201,16 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
     TARJETA DINAMARCA — CÓMO ACTIVAR CUANDO ESTÉ LISTA:
     1. Cambia "inactive" por "active" en el class
     2. Cambia href="#proximamente" por la URL real, ej: href="./dinamarca-2026/index.html"
-    3. Borra la línea: onclick="return false;"
+    3. Borra la línea:
     ══════════════════════════════════════════════
     -->
     <a class="trip-card denmark active" href="./dinamarca-2026/index.html">
       <div class="card-bg"></div><div class="card-pat"></div>
       <div class="c-float">DK</div>
       <div class="c-sticker">🇩🇰</div>
-      <div class="inactive-lbl">Próximamente</div>
       <div class="c-inner">
-        <div class="c-top"><span class="c-year">Agosto 2026</span><span class="c-arrow" style="opacity:0.28">↗</span></div>
-        <div><div class="c-sub"></div><div class="c-title">Dina<br><em>marca</em></div><div class="c-who"><span class="c-dot"></span>Trio Lalala</div></div>
+        <div class="c-top"><span class="c-year">Agosto 2026</span><span class="c-arrow">↗</span></div>
+        <div><div class="c-sub">Destino</div><div class="c-title">Dina<br><em>marca</em></div><div class="c-who"><span class="c-dot"></span>Trio Lalala</div></div>
       </div>
     </a>
 
