@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>Japan — 13–22 Ago, 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  color-scheme: light only;
+  --bg:#faf8f4;
+  --bg2:#f2ede4;
+  --bg3:#e8e1d4;
+  --ink:#1a1714;
+  --muted:#7a7060;
+  --light:#b0a490;
+  --border:rgba(26,23,20,0.1);
+  --border2:rgba(26,23,20,0.18);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Jost',sans-serif;
+  --mono:'DM Mono',monospace;
+  --tok:#8b6914;
+  --tok-bg:#fdf5e0;
+  --hok:#1a5f7a;
+  --hok-bg:#e8f4f8;
+  --osa:#8b3a1a;
+  --osa-bg:#fdf0eb;
+  --kan:#3a6b2a;
+  --kan-bg:#edf5e8;
+  --warn-bg:#fdf4ee;
+  --warn:#9b4a20;
+  --info-bg:#eef4fd;
+  --info:#1a4a7a;
+  --ok-bg:#edf5ee;
+  --ok:#1a6b2a;
+}
+html{scroll-behavior:smooth;background:#faf8f4;color:#1a1714}
+body{
+  background:#faf8f4 !important;
+  color:#1a1714 !important;
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-text-size-adjust:100%;
+  forced-color-adjust:none;
+}
+/* Force light mode - override OS dark mode completely */
+@media (prefers-color-scheme: dark) {
+  html { background:#faf8f4 !important; color:#1a1714 !important; }
+  body { background:#faf8f4 !important; color:#1a1714 !important; }
+  * { forced-color-adjust: none; }
+  .sum-body, .day-body, .panel { background:#faf8f4 !important; color:#1a1714 !important; }
+  .allergy-strip { background:#f2ede4 !important; color:#1a1714 !important; }
+  .dest-card, .hotel-card, .dest-grid, .hotel-grid { background:#f2ede4 !important; color:#1a1714 !important; }
+  .itin-table td, .itin-table tr { background:#faf8f4 !important; color:#1a1714 !important; }
+  .itin-table td.date-cell { color:#1a1714 !important; }
+  .itin-table td.highlight-cell { color:#4a4540 !important; }
+  .itin-table td.transport-cell { color:#7a7060 !important; }
+  .itin-table td.day-num-cell { color:#7a7060 !important; }
+  .res-table td, .res-table tr { background:#faf8f4 !important; color:#1a1714 !important; }
+  .day-res-table td, .day-res-table tr { background:#faf8f4 !important; color:#1a1714 !important; }
+  .tr-card { background:#e8e1d4 !important; color:#1a1714 !important; }
+  .tr-from, .tr-to { color:#1a1714 !important; }
+  .tr-mid { color:#5a5248 !important; }
+  .tr-detail { color:#7a7060 !important; }
+  .block { background:#faf8f4 !important; }
+  .b-name { color:#1a1714 !important; }
+  .b-desc { color:#3a3530 !important; }
+  .b-sub { color:#5a5248 !important; }
+  .b-time { color:#7a7060 !important; }
+  .b-backup { background:#e8e1d4 !important; color:#4a4540 !important; }
+  .dh-summary { background:#f2ede4 !important; color:#3a3530 !important; }
+  .dh-climate { background:#f2ede4 !important; color:#7a7060 !important; }
+  .dh-date { color:#1a1714 !important; }
+  .dh-num { color:#7a7060 !important; }
+  .section-title { color:#1a1714 !important; }
+  .section-eyebrow { color:#7a7060 !important; }
+  .slabel { color:#7a7060 !important; }
+  .dest-name { color:#1a1714 !important; }
+  .dest-desc { color:#3a3530 !important; }
+  .dest-highlights li { color:#7a7060 !important; }
+  .dest-climate { background:#e8e1d4 !important; color:#7a7060 !important; }
+  .hotel-area { color:#1a1714 !important; }
+  .hotel-city { color:#7a7060 !important; }
+  .hotel-picks { color:#3a3530 !important; }
+  .hotel-picks strong { color:#1a1714 !important; }
+  .day-res-section { background:#faf8f4 !important; }
+  .day-res-title { color:#7a7060 !important; }
+  .flag.ok { background:#edf5ee !important; color:#1a6b2a !important; }
+  .flag.warn { background:#fdf4ee !important; color:#9b4a20 !important; }
+  .flag.info { background:#eef4fd !important; color:#1a4a7a !important; }
+  .flag.star { background:#fdf5e0 !important; color:#8b6914 !important; }
+  .flag.note { background:#e8e1d4 !important; color:#7a7060 !important; }
+  .flag.early { background:#fff8f0 !important; color:#9b5a10 !important; }
+  .city-pill.tok { background:#fdf5e0 !important; color:#8b6914 !important; }
+  .city-pill.hok { background:#e8f4f8 !important; color:#1a5f7a !important; }
+  .city-pill.osa { background:#fdf0eb !important; color:#8b3a1a !important; }
+  .city-pill.kan { background:#edf5e8 !important; color:#3a6b2a !important; }
+  .urgency.critical { background:#fdf0eb !important; color:#8b3a1a !important; }
+  .urgency.high { background:#fdf5e0 !important; color:#8b6914 !important; }
+  .urgency.moderate { background:#edf5e8 !important; color:#3a6b2a !important; }
+  .day-footer button { color:#7a7060 !important; background:#faf8f4 !important; }
+  .itin-table th, .res-table th { color:#7a7060 !important; background:#faf8f4 !important; }
+  .day-res-table th { color:#7a7060 !important; background:#faf8f4 !important; }
+}
+
+/* ── TOP NAV ── */
+.topnav{
+  position:sticky;top:0;z-index:200;
+  background:var(--ink);color:var(--bg);
+  display:flex;align-items:stretch;height:52px;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.tn-logo{
+  padding:0 28px;display:flex;align-items:center;
+  font-family:var(--mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(250,248,244,0.4);border-right:1px solid rgba(255,255,255,0.08);
+  white-space:nowrap;
+}
+.tn-links{display:flex;overflow-x:auto;scrollbar-width:none}
+.tn-links::-webkit-scrollbar{display:none}
+.tn-btn{
+  flex-shrink:0;padding:0 16px;display:flex;align-items:center;
+  font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(250,248,244,0.4);border:none;background:none;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.18s;white-space:nowrap;
+}
+.tn-btn:hover{color:rgba(250,248,244,0.8)}
+.tn-btn.active{color:#faf8f4;border-bottom-color:#faf8f4}
+.tn-btn.active.tok,.tn-btn:hover.tok{color:#f0c84a;border-bottom-color:#f0c84a}
+.tn-btn.active.hok,.tn-btn:hover.hok{color:#4ab8e0;border-bottom-color:#4ab8e0}
+.tn-btn.active.osa,.tn-btn:hover.osa{color:#e0784a;border-bottom-color:#e0784a}
+.tn-btn.active.kan,.tn-btn:hover.kan{color:#78c060;border-bottom-color:#78c060}
+
+/* ── PANELS ── */
+.panel{display:none}
+.panel.active{display:block}
+
+/* ════════════════════════════════════
+   SUMMARY PAGE
+════════════════════════════════════ */
+.sum-hero{
+  background:var(--ink);color:var(--bg);
+  padding:72px 80px 60px;
+  display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end;
+}
+.sh-eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,248,244,0.65);margin-bottom:14px}
+.sh-title{font-family:var(--serif);font-size:64px;font-weight:400;line-height:0.95;letter-spacing:-0.02em}
+.sh-title em{font-style:italic}
+.sh-sub{margin-top:20px;font-family:var(--sans);font-size:14px;font-weight:300;color:rgba(250,248,244,0.85);line-height:1.85;max-width:480px;font-size:15px}
+.sh-stats{display:flex;flex-direction:column;gap:0}
+.sh-stat{padding:16px 0;border-bottom:1px solid rgba(250,248,244,0.08);display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.sh-stat:last-child{border-bottom:none}
+.sh-stat-label{font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,248,244,0.62)}
+.sh-stat-val{font-family:var(--serif);font-size:18px;font-weight:400;text-align:right;line-height:1.3}
+
+/* ALLERGY STRIP */
+.allergy-strip{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 80px;display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.as-title{font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+.as-item{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;color:var(--muted)}
+.as-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.as-dot.nut{background:#c06030}
+.as-dot.lac{background:#3080c0}
+.as-dot.ok{background:#30a050}
+
+/* SUMMARY BODY */
+.sum-body{max-width:1080px;margin:0 auto;padding:64px 80px 100px}
+
+/* OVERVIEW TABLE */
+.section-title{
+  font-family:var(--serif);font-size:28px;font-weight:400;font-style:italic;
+  margin-bottom:6px;
+}
+.section-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+
+.itin-table{width:100%;border-collapse:collapse;margin-bottom:56px;font-size:14px}
+.itin-table th{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted);padding:10px 14px;border-bottom:2px solid var(--border2);text-align:left;
+}
+.itin-table td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-family:var(--sans);font-weight:300;line-height:1.5}
+.itin-table tr:hover td{background:var(--bg2)}
+.city-pill{
+  display:inline-block;padding:2px 10px;border-radius:2px;
+  font-family:var(--mono);font-size:8px;letter-spacing:0.1em;text-transform:uppercase;font-weight:400;
+}
+.city-pill.tok{background:var(--tok-bg);color:var(--tok);border:1px solid rgba(139,105,20,0.2)}
+.city-pill.hok{background:var(--hok-bg);color:var(--hok);border:1px solid rgba(26,95,122,0.2)}
+.city-pill.osa{background:var(--osa-bg);color:var(--osa);border:1px solid rgba(139,58,26,0.2)}
+.city-pill.kan{background:var(--kan-bg);color:var(--kan);border:1px solid rgba(58,107,42,0.2)}
+.day-num-cell{font-family:var(--mono);font-size:10px;color:var(--light);font-weight:300}
+.date-cell{font-family:var(--mono);font-size:11px;font-weight:400}
+.transport-cell{font-family:var(--mono);font-size:9px;color:var(--muted)}
+.highlight-cell{font-size:12px;font-weight:400}
+
+/* DESTINATIONS */
+.dest-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:56px}
+.dest-card{background:var(--bg2);padding:28px 32px;border:1px solid var(--border)}
+.dest-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px}
+.dest-name{font-family:var(--serif);font-size:24px;font-weight:400}
+.dest-name em{font-style:italic}
+.dest-days-badge{font-family:var(--mono);font-size:8px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-top:4px;flex-shrink:0}
+.dest-days-badge.tok{background:var(--tok-bg);color:var(--tok)}
+.dest-days-badge.hok{background:var(--hok-bg);color:var(--hok)}
+.dest-days-badge.osa{background:var(--osa-bg);color:var(--osa)}
+.dest-days-badge.kan{background:var(--kan-bg);color:var(--kan)}
+.dest-desc{font-size:14px;font-weight:300;line-height:1.7;color:#3a3530;margin-bottom:16px}
+.dest-highlights{list-style:none;display:flex;flex-direction:column;gap:4px}
+.dest-highlights li{
+  font-family:var(--mono);font-size:11px;color:var(--muted);
+  padding-left:14px;position:relative;
+}
+.dest-highlights li::before{content:'→';position:absolute;left:0;color:var(--muted)}
+.dest-climate{
+  margin-top:14px;padding:8px 12px;background:var(--bg3);border-radius:2px;
+  font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.04em;
+}
+
+/* RESERVATIONS MASTER */
+.res-table{width:100%;border-collapse:collapse;margin-bottom:56px;font-size:14px}
+.res-table th{font-family:var(--mono);font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);padding:10px 14px;border-bottom:2px solid var(--border2);text-align:left}
+.res-table td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-family:var(--sans);font-weight:300;line-height:1.5}
+.res-table tr:hover td{background:var(--bg2)}
+.urgency{display:inline-block;padding:2px 8px;border-radius:2px;font-family:var(--mono);font-size:8px;letter-spacing:0.08em;text-transform:uppercase}
+.urgency.critical{background:#fdf0eb;color:#8b3a1a;border:1px solid rgba(139,58,26,0.25)}
+.urgency.high{background:#fdf5e0;color:#8b6914;border:1px solid rgba(139,105,20,0.25)}
+.urgency.moderate{background:#edf5e8;color:#3a6b2a;border:1px solid rgba(58,107,42,0.25)}
+
+/* HOTELS */
+.hotel-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:2px;margin-bottom:56px}
+.hotel-card{background:var(--bg2);padding:22px 24px;border:1px solid var(--border)}
+.hotel-city{font-family:var(--mono);font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.hotel-area{font-family:var(--serif);font-size:18px;font-weight:400;margin-bottom:6px}
+.hotel-picks{font-size:13px;font-weight:300;line-height:1.75;color:#3a3530}
+.hotel-picks strong{font-weight:500;color:var(--ink);display:block;margin-top:6px}
+
+/* ════════════════════════════════════
+   DAY PAGES
+════════════════════════════════════ */
+.day-hero{
+  padding:52px 80px 40px;border-bottom:1px solid var(--border2);
+  display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;
+}
+.dh-left{}
+.dh-num{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.dh-date{font-family:var(--serif);font-size:40px;font-weight:400;line-height:1;margin-bottom:10px}
+.dh-cities{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.dh-summary{
+  font-family:var(--sans);font-size:15px;font-weight:300;line-height:1.8;
+  color:#3a3530;max-width:620px;
+  padding:20px 24px;background:var(--bg2);border-left:3px solid var(--border2);
+  border-radius:0 2px 2px 0;
+}
+.dh-climate{
+  background:var(--bg2);border:1px solid var(--border);border-radius:3px;
+  padding:14px 18px;font-family:var(--mono);font-size:9px;color:var(--muted);
+  line-height:1.8;letter-spacing:0.04em;text-align:right;min-width:200px;
+}
+
+/* DAY BODY */
+.day-body{max-width:920px;margin:0 auto;padding:48px 80px 80px}
+
+/* RESERVATIONS TABLE (per day) */
+.day-res-section{margin-bottom:40px}
+.day-res-title{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.day-res-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.day-res-table{width:100%;border-collapse:collapse;font-size:12px}
+.day-res-table th{font-family:var(--mono);font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);padding:8px 12px;border-bottom:1px solid var(--border);text-align:left}
+.day-res-table td{padding:10px 12px;border-bottom:1px solid var(--border);font-family:var(--sans);font-weight:300;vertical-align:top;font-size:13px}
+.day-res-table tr:last-child td{border-bottom:none}
+.day-res-table tr:hover td{background:var(--bg2)}
+
+/* TRANSPORT CARD */
+.tr-card{
+  background:var(--bg3);border:1px solid var(--border2);border-radius:3px;
+  padding:14px 20px;margin-bottom:36px;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.tr-from,.tr-to{font-family:var(--mono);font-size:13px;font-weight:400}
+.tr-mid{flex:1;text-align:center;font-family:var(--mono);font-size:9px;color:#5a5248;letter-spacing:0.08em}
+.tr-badge{font-family:var(--mono);font-size:8px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;background:var(--ink);color:var(--bg);flex-shrink:0}
+.tr-detail{font-family:var(--mono);font-size:11px;color:var(--muted);width:100%;margin-top:6px;letter-spacing:0.03em}
+
+/* SECTION LABEL */
+.slabel{font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin:36px 0 0;display:flex;align-items:center;gap:10px}
+.slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* BLOCKS */
+.blocks{display:flex;flex-direction:column}
+.block{display:grid;grid-template-columns:76px 1fr;border-top:1px solid var(--border);padding:20px 0}
+.block:last-child{border-bottom:1px solid var(--border)}
+.b-time{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px;letter-spacing:0.04em;font-weight:400}
+.b-body{}
+.b-name{font-family:var(--serif);font-size:20px;font-weight:400;line-height:1.25;margin-bottom:4px}
+.b-name em{font-style:italic}
+.b-sub{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.b-desc{font-size:14px;font-weight:300;line-height:1.7;color:#3a3530}
+.b-desc strong{font-weight:500;color:var(--ink)}
+.b-backup{
+  margin-top:10px;padding:10px 14px;
+  background:var(--bg3);border-left:2px solid var(--muted);
+  font-size:12px;font-weight:400;color:#4a4540;line-height:1.6;
+  border-radius:0 2px 2px 0;
+}
+.b-backup strong{color:var(--ink);font-weight:500;font-size:14px}
+
+/* FLAGS */
+.flags{display:flex;flex-wrap:wrap;gap:4px;margin-top:9px}
+.flag{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;padding:3px 9px;border-radius:2px}
+.flag.ok{background:var(--ok-bg);color:var(--ok);border:1px solid rgba(48,160,80,0.2)}
+.flag.warn{background:var(--warn-bg);color:var(--warn);border:1px solid rgba(155,74,32,0.25)}
+.flag.info{background:var(--info-bg);color:var(--info);border:1px solid rgba(26,74,122,0.2)}
+.flag.star{background:var(--tok-bg);color:var(--tok);border:1px solid rgba(139,105,20,0.2)}
+.flag.note{background:var(--bg3);color:var(--muted);border:1px solid var(--border2)}
+.flag.early{background:#fff8f0;color:#9b5a10;border:1px solid rgba(155,90,16,0.25)}
+
+/* FOOTER NAV */
+.day-footer{display:flex;justify-content:space-between;margin-top:56px;padding-top:20px;border-top:1px solid var(--border)}
+.day-footer button{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--muted);background:none;border:none;cursor:pointer;padding:4px 0;transition:color 0.15s;
+}
+.day-footer button:hover{color:var(--ink)}
+.day-footer button:disabled{opacity:0.3;cursor:default}
+
+/* ════════════ RESPONSIVE ════════════ */
+
+/* Mobile nav: hamburger + dropdown */
+.mob-nav{display:none}
+.mob-trigger{
+  display:none;align-items:center;justify-content:space-between;
+  width:100%;padding:0 20px;height:52px;
+  background:var(--ink);color:var(--bg);
+  border:none;cursor:pointer;font-family:var(--mono);font-size:10px;
+  letter-spacing:0.12em;text-transform:uppercase;
+}
+.mob-trigger-label{display:flex;align-items:center;gap:12px}
+.mob-trigger-dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex-shrink:0}
+.mob-trigger-arrow{font-size:14px;transition:transform 0.25s;flex-shrink:0}
+.mob-trigger.open .mob-trigger-arrow{transform:rotate(180deg)}
+
+.mob-dropdown{
+  display:none;flex-direction:column;
+  background:var(--ink);border-top:1px solid rgba(255,255,255,0.08);
+  max-height:0;overflow-y:auto;overflow-x:hidden;
+  transition:max-height 0.4s ease;
+  -webkit-overflow-scrolling:touch;
+}
+.mob-dropdown.open{display:flex;max-height:70vh;overflow-y:auto}
+
+.mob-section-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.18em;text-transform:uppercase;
+  color:rgba(250,248,244,0.55);padding:12px 20px 4px;
+}
+.mob-btn{
+  padding:12px 20px;text-align:left;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(250,248,244,0.85);background:none;border:none;cursor:pointer;
+  border-bottom:1px solid rgba(255,255,255,0.08);transition:all 0.15s;
+  display:flex;align-items:center;gap:10px;
+}
+.mob-btn:hover{color:var(--bg);background:rgba(255,255,255,0.04)}
+.mob-btn.active{color:#faf8f4;background:rgba(255,255,255,0.06)}
+.mob-btn.active.tok{color:#f0c84a}
+.mob-btn.active.hok{color:#4ab8e0}
+.mob-btn.active.osa{color:#e0784a}
+.mob-btn.active.kan{color:#78c060}
+.mob-btn-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;opacity:0.5}
+.mob-btn.tok .mob-btn-dot{background:#f0c84a}
+.mob-btn.hok .mob-btn-dot{background:#4ab8e0}
+.mob-btn.osa .mob-btn-dot{background:#e0784a}
+.mob-btn.kan .mob-btn-dot{background:#78c060}
+.mob-btn.sum .mob-btn-dot{background:rgba(250,248,244,0.4)}
+
+@media (max-width: 768px) {
+  /* Hide desktop nav links, show mobile trigger */
+  .tn-links{display:none}
+  .mob-trigger{display:flex}
+
+  /* Hero */
+  .sum-hero{
+    grid-template-columns:1fr;
+    padding:40px 24px 32px;
+    gap:32px;
+  }
+  .sh-title{font-size:40px}
+  .sh-stats{border-top:1px solid rgba(250,248,244,0.1);padding-top:20px}
+
+  /* Allergy strip */
+  .allergy-strip{padding:12px 20px;gap:12px;flex-direction:column;align-items:flex-start}
+
+  /* Summary body */
+  .sum-body{padding:32px 20px 60px}
+
+  /* Tables → card layout */
+  .itin-table thead{display:none}
+  .itin-table tr{
+    display:block;padding:14px 0;border-bottom:1px solid var(--border);
+  }
+  .itin-table td{
+    display:block;padding:3px 0;border:none;font-size:14px;
+  }
+  .itin-table td.day-num-cell{font-size:11px;color:var(--muted);margin-bottom:2px}
+  .itin-table td.date-cell{font-size:14px;font-weight:500;margin-bottom:4px}
+  .itin-table td.transport-cell{font-size:11px;color:var(--muted);margin-top:4px}
+  .itin-table td.highlight-cell{color:var(--muted)}
+
+  .res-table thead{display:none}
+  .res-table tr{display:block;padding:14px 0;border-bottom:1px solid var(--border)}
+  .res-table td{display:block;padding:3px 0;border:none}
+  .res-table td:first-child{font-size:14px;font-weight:500;margin-bottom:6px}
+
+  /* Destination grid */
+  .dest-grid{grid-template-columns:1fr}
+  .dest-card{padding:22px 20px}
+  .dest-name{font-size:20px}
+
+  /* Hotel grid */
+  .hotel-grid{grid-template-columns:1fr 1fr}
+  .hotel-card{padding:18px 16px}
+
+  /* Day hero */
+  .day-hero{
+    grid-template-columns:1fr;
+    padding:32px 20px 28px;
+    gap:20px;
+  }
+  .dh-date{font-size:28px}
+  .dh-climate{text-align:left;min-width:unset}
+  .dh-summary{font-size:13px;padding:16px 18px}
+
+  /* Day body */
+  .day-body{padding:28px 20px 60px}
+
+  /* Day res table */
+  .day-res-table thead{display:none}
+  .day-res-table tr{display:block;padding:12px 0;border-bottom:1px solid var(--border)}
+  .day-res-table td{display:block;padding:3px 0;border:none;font-size:13px}
+  .day-res-table td:first-child{font-weight:500;font-size:13px;margin-bottom:4px}
+
+  /* Transport card */
+  .tr-card{padding:14px 16px;gap:10px}
+  .tr-from,.tr-to{font-size:11px}
+  .tr-mid{font-size:8px}
+
+  /* Blocks */
+  .block{grid-template-columns:60px 1fr;padding:16px 0;gap:0 10px}
+  .b-time{font-size:11px}
+  .b-name{font-size:17px}
+  .b-desc{font-size:14px}
+
+  /* Section title */
+  .section-title{font-size:22px}
+
+  /* Flags */
+  .flag{font-size:7px;padding:2px 6px}
+  
+/* TIPS SECTION */
+.tips-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+  margin-bottom:40px;
+}
+.tip-card{
+  background:#fff;
+  border:1px solid var(--border);
+  padding:22px 24px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+.tip-card--alert{
+  border-color:rgba(139,105,20,0.3);
+  background:var(--tok-bg);
+}
+.tip-icon{
+  font-size:22px;
+  flex-shrink:0;
+  line-height:1;
+  margin-top:2px;
+}
+.tip-content{}
+.tip-title{
+  font-family:var(--sans);
+  font-size:14px;
+  font-weight:500;
+  color:var(--ink);
+  margin-bottom:6px;
+  line-height:1.3;
+}
+.tip-text{
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:300;
+  color:#4a4540;
+  line-height:1.65;
+}
+.tip-text strong{
+  font-weight:500;
+  color:var(--ink);
+}
+@media(max-width:768px){
+  .tips-grid{grid-template-columns:1fr}
+  .tip-card{padding:18px 20px}
+}
+
+/* Legibility boosts for mobile */
+  .b-time{color:#5a5248;font-size:10px}
+  .b-sub{color:#5a5248;font-size:9px}
+  .section-eyebrow{color:#5a5248}
+  .day-num-cell{color:#5a5248 !important}
+  .transport-cell{color:#5a5248 !important}
+  .highlight-cell{color:#3a3530 !important;font-size:14px}
+  .dest-highlights li{color:#5a5248;font-size:12px}
+  .hotel-picks{color:#3a3530;font-size:13px}
+  .hotel-city{color:#5a5248}
+  .slabel{color:#5a5248}
+  .as-item{color:#4a4540}
+  .flag{letter-spacing:0.06em}
+
+
+  /* Footer nav */
+  .day-footer{margin-top:36px}
+}
+
+@media (max-width: 480px) {
+  .sum-hero{padding:32px 16px 28px}
+  .sh-title{font-size:34px}
+  .sum-body{padding:24px 16px 48px}
+  .hotel-grid{grid-template-columns:1fr}
+  .day-hero{padding:24px 16px 20px}
+  .day-body{padding:20px 16px 48px}
+  .allergy-strip{padding:12px 16px}
+  .dh-date{font-size:24px}
+  .block{grid-template-columns:52px 1fr}
+}
+
+
+/* JAPAN MAP */
+.jp-map-wrap{
+  background:var(--bg2);border:1px solid var(--border2);border-radius:4px;
+  padding:4px;margin-bottom:48px;overflow:hidden;
+}
+.jp-map-wrap svg{width:100%;height:auto;display:block;border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <a class="tn-logo" href="../index.html" style="text-decoration:none;cursor:pointer;" title="Volver a Indi Travels">🏠 Indi Travels</a>
+  <div class="tn-links">
+    <button class="tn-btn active" onclick="showPanel('summary')">Resumen</button>
+    <button class="tn-btn tok" onclick="showPanel('d1')">D1 · 13 Ago</button>
+    <button class="tn-btn hok" onclick="showPanel('d2')">D2 · 14 Ago</button>
+    <button class="tn-btn hok" onclick="showPanel('d3')">D3 · 15 Ago</button>
+    <button class="tn-btn hok" onclick="showPanel('d4')">D4 · 16 Ago</button>
+    <button class="tn-btn osa" onclick="showPanel('d5')">D5 · 17 Ago</button>
+    <button class="tn-btn osa" onclick="showPanel('d6')">D6 · 18 Ago</button>
+    <button class="tn-btn osa" onclick="showPanel('d7')">D7 · 19 Ago</button>
+    <button class="tn-btn kan" onclick="showPanel('d8')">D8 · 20 Ago</button>
+    <button class="tn-btn tok" onclick="showPanel('d9')">D9 · 21 Ago</button>
+    <button class="tn-btn tok" onclick="showPanel('d10')">D10 · 22 Ago</button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <a href="../index.html" style="display:block;background:#0a0905;padding:8px 20px;font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,248,244,0.4);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.06);">🏠 ← Indi Travels</a>
+  <button class="mob-trigger" id="mobTrigger" onclick="toggleMobMenu()">
+    <span class="mob-trigger-label">
+      <span class="mob-trigger-dot tok" id="mobDot"></span>
+      <span id="mobLabel">Resumen</span>
+    </span>
+    <span class="mob-trigger-arrow" id="mobArrow">▾</span>
+  </button>
+  <div class="mob-dropdown" id="mobDropdown">
+    <div class="mob-section-label">Resumen</div>
+    <button class="mob-btn sum active" onclick="showPanel('summary');closeMob()">
+      <span class="mob-btn-dot"></span>Resumen · Trip Summary
+    </button>
+    <div class="mob-section-label">Tokio</div>
+    <button class="mob-btn tok" onclick="showPanel('d1');closeMob()">
+      <span class="mob-btn-dot"></span>Día 1 · 13 Ago · Tokio → Sapporo
+    </button>
+    <div class="mob-section-label">Hokkaido</div>
+    <button class="mob-btn hok" onclick="showPanel('d2');closeMob()">
+      <span class="mob-btn-dot"></span>Día 2 · 14 Ago · Sapporo
+    </button>
+    <button class="mob-btn hok" onclick="showPanel('d3');closeMob()">
+      <span class="mob-btn-dot"></span>Día 3 · 15 Ago · Otaru
+    </button>
+    <button class="mob-btn hok" onclick="showPanel('d4');closeMob()">
+      <span class="mob-btn-dot"></span>Día 4 · 16 Ago · Península Shakotan
+    </button>
+    <div class="mob-section-label">Osaka</div>
+    <button class="mob-btn osa" onclick="showPanel('d5');closeMob()">
+      <span class="mob-btn-dot"></span>Day 5 · 17 Ago · Sapporo → Osaka
+    </button>
+    <button class="mob-btn osa" onclick="showPanel('d6');closeMob()">
+      <span class="mob-btn-dot"></span>Día 6 · 18 Ago · Osaka
+    </button>
+    <button class="mob-btn osa" onclick="showPanel('d7');closeMob()">
+      <span class="mob-btn-dot"></span>Day 7 · 19 Ago · Osaka → Kanazawa
+    </button>
+    <div class="mob-section-label">Kanazawa</div>
+    <button class="mob-btn kan" onclick="showPanel('d8');closeMob()">
+      <span class="mob-btn-dot"></span>Día 8 · 20 Ago · Kanazawa
+    </button>
+    <div class="mob-section-label">Tokio</div>
+    <button class="mob-btn tok" onclick="showPanel('d9');closeMob()">
+      <span class="mob-btn-dot"></span>Day 9 · 21 Ago · Kanazawa → Tokio
+    </button>
+    <button class="mob-btn tok" onclick="showPanel('d10');closeMob()">
+      <span class="mob-btn-dot"></span>Day 10 · 22 Ago · Salida
+    </button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════ SUMMARY ════════════════════════════════════ -->
+<div class="panel active" id="panel-summary">
+
+<div class="sum-hero">
+  <div>
+    <div class="sh-eyebrow">Documento privado de viaje · Grupo de 4 personas</div>
+    <h1 class="sh-title">Japan<br><em>August</em><br>2025</h1>
+    <p class="sh-sub">Tokio · Sapporo · Otaru · Shakotan · Osaka · Kanazawa · Tokio<br>10 días · Alta gama · Independiente · Inmersión cultural</p>
+  </div>
+  <div class="sh-stats">
+    <div class="sh-stat"><span class="sh-stat-label">Fechas</span><span class="sh-stat-val">13–22 Ago</span></div>
+    <div class="sh-stat"><span class="sh-stat-label">Duración</span><span class="sh-stat-val">10 días · 9 noches</span></div>
+    <div class="sh-stat"><span class="sh-stat-label">Viajeros</span><span class="sh-stat-val">4 adultos</span></div>
+    <div class="sh-stat"><span class="sh-stat-label">Llegada</span><span class="sh-stat-val">Tokio HND · 08:00</span></div>
+    <div class="sh-stat"><span class="sh-stat-label">Salida</span><span class="sh-stat-val">Tokio HND · 19:00</span></div>
+    <div class="sh-stat"><span class="sh-stat-label">Alimentación</span><span class="sh-stat-val">1× nut/stone fruit<br>1× lactose intolerant</span></div>
+  </div>
+</div>
+
+<div class="allergy-strip">
+  <div class="as-title">Alimentación</div>
+  <div class="as-item"><span class="as-dot nut"></span>Viajero 1 — alérgico: frutos secos (almendras, cacahuetes, pistachos, anacardos, nueces) · manzana · frutas de hueso</div>
+  <div class="as-item"><span class="as-dot lac"></span>Viajero 2 — intolerante a la lactosa · evitar todos los lácteos</div>
+  <div class="as-item"><span class="as-dot ok"></span>Verde = confirmado seguro para ambos</div>
+</div>
+
+<div class="sum-body">
+
+  <!-- OVERVIEW TABLE -->
+
+  <div class="section-eyebrow" style="margin-top:0">Ruta</div>
+  <h2 class="section-title" style="font-family:var(--serif);font-size:28px;font-weight:400;font-style:italic;margin-bottom:20px">Recorrido por Japón</h2>
+  <div class="jp-map-wrap">
+    <svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa del recorrido por Japón">
+      <defs>
+        <marker id="jp-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#c4a35a" opacity="0.9"/>
+        </marker>
+        <filter id="jp-shadow">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(24,22,15,0.25)"/>
+        </filter>
+        <linearGradient id="seaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1a3a5c;stop-opacity:0.15"/>
+          <stop offset="100%" style="stop-color:#2a5a7c;stop-opacity:0.08"/>
+        </linearGradient>
+      </defs>
+
+      <!-- SEA BG -->
+      <rect width="700" height="480" fill="#1e2a3a" rx="8"/>
+      <rect width="700" height="480" fill="url(#seaGrad)" rx="8"/>
+
+      <!-- SEA LABELS -->
+      <text x="60" y="240" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.12)" letter-spacing="3" transform="rotate(-90,60,240)">MAR DE JAPÓN</text>
+      <text x="640" y="300" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.12)" letter-spacing="3" transform="rotate(90,640,300)">PACÍFICO</text>
+
+      <!-- ══ JAPAN LANDMASS — simplified ══ -->
+
+      <!-- HOKKAIDO -->
+      <path d="
+        M 395,28 L 420,22 L 448,30 L 470,42 L 488,58
+        L 494,76 L 488,94 L 472,106 L 455,112
+        L 434,110 L 415,100 L 398,88 L 385,72
+        L 380,54 L 383,38 Z
+      " fill="#2a3a2a" stroke="#3a5a3a" stroke-width="1"/>
+
+      <!-- Small island near Hokkaido -->
+      <ellipse cx="510" cy="72" rx="14" ry="9" fill="#2a3a2a" stroke="#3a5a3a" stroke-width="1"/>
+
+      <!-- HONSHU (main island — long, diagonal) -->
+      <path d="
+        M 378,105 L 398,100 L 415,108 L 428,122
+        L 438,140 L 442,160 L 438,180 L 428,198
+        L 415,212 L 400,224 L 382,232 L 362,236
+        L 340,234 L 318,226 L 298,212 L 280,196
+        L 265,178 L 255,160 L 250,142 L 252,124
+        L 260,110 L 274,100 L 292,98 L 312,102
+        L 330,108 L 350,110 L 365,108 Z
+      " fill="#2a3a2a" stroke="#3a5a3a" stroke-width="1.2"/>
+
+      <!-- Kii peninsula (south of Osaka/Kanazawa area) -->
+      <path d="M 295,226 L 280,242 L 270,260 L 278,270 L 294,262 L 302,244 Z" fill="#2a3a2a" stroke="#3a5a3a" stroke-width="1"/>
+
+      <!-- SHIKOKU -->
+      <path d="
+        M 310,250 L 330,244 L 352,246 L 368,256
+        L 372,268 L 362,278 L 342,282 L 320,278
+        L 305,266 L 306,254 Z
+      " fill="#2a3a2a" stroke="#3a5a3a" stroke-width="1"/>
+
+      <!-- KYUSHU -->
+      <path d="
+        M 270,270 L 285,262 L 300,266 L 308,280
+        L 305,298 L 292,310 L 275,314 L 260,305
+        L 252,290 L 255,276 Z
+      " fill="#2a3a2a" stroke="#3a5a3a" stroke-width="1"/>
+
+      <!-- ══ ROUTE ══ -->
+
+      <!-- D1: Tokyo → Sapporo (flight arc) -->
+      <path d="M 420,200 Q 470,140 435,75" fill="none" stroke="#c4a35a" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#jp-arrow)" opacity="0.8"/>
+
+      <!-- D1-D4: Sapporo → Otaru (short) -->
+      <line x1="432" y1="80" x2="415" y2="85" stroke="#4ab8e0" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.7"/>
+
+      <!-- D4→D5: Sapporo → Osaka (flight arc) -->
+      <path d="M 432,78 Q 390,140 310,210" fill="none" stroke="#c4a35a" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#jp-arrow)" opacity="0.8"/>
+
+      <!-- D7: Osaka → Kanazawa (train) -->
+      <path d="M 308,210 Q 330,195 352,182" fill="none" stroke="#78c060" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#jp-arrow)" opacity="0.85"/>
+
+      <!-- D9: Kanazawa → Tokyo (shinkansen) -->
+      <path d="M 355,180 Q 385,190 418,196" fill="none" stroke="#78c060" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#jp-arrow)" opacity="0.85"/>
+
+      <!-- ══ LOCATION DOTS ══ -->
+
+      <!-- TOKYO D1/D9/D10 -->
+      <circle cx="420" cy="200" r="10" fill="#c4a35a" stroke="#faf8f4" stroke-width="2.5" filter="url(#jp-shadow)"/>
+      <text x="420" y="204" font-family="monospace" font-size="9" fill="#18160f" text-anchor="middle" font-weight="bold">1·9·10</text>
+      <rect x="432" y="190" width="64" height="18" rx="3" fill="#c4a35a" opacity="0.95"/>
+      <text x="464" y="202" font-family="sans-serif" font-size="11" font-weight="bold" fill="#18160f" text-anchor="middle">Tokio</text>
+
+      <!-- SAPPORO D1-D4 -->
+      <circle cx="434" cy="78" r="10" fill="#4ab8e0" stroke="#faf8f4" stroke-width="2.5" filter="url(#jp-shadow)"/>
+      <text x="434" y="82" font-family="monospace" font-size="9" fill="#0a1a2a" text-anchor="middle" font-weight="bold">1-4</text>
+      <rect x="446" y="68" width="68" height="18" rx="3" fill="#4ab8e0" opacity="0.95"/>
+      <text x="480" y="80" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0a1a2a" text-anchor="middle">Sapporo</text>
+
+      <!-- OTARU D3 -->
+      <circle cx="415" cy="87" r="6" fill="#2a8aaa" stroke="#faf8f4" stroke-width="1.8"/>
+      <text x="415" y="91" font-family="monospace" font-size="7" fill="white" text-anchor="middle">3</text>
+      <rect x="396" y="76" width="46" height="15" rx="2" fill="#2a8aaa" opacity="0.9"/>
+      <text x="419" y="86" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Otaru</text>
+
+      <!-- SHAKOTAN D4 -->
+      <circle cx="400" cy="68" r="5" fill="#1a7a9a" stroke="#faf8f4" stroke-width="1.5"/>
+      <text x="400" y="72" font-family="monospace" font-size="7" fill="white" text-anchor="middle">4</text>
+      <rect x="360" y="57" width="68" height="14" rx="2" fill="#1a7a9a" opacity="0.88"/>
+      <text x="394" y="67" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Shakotan</text>
+
+      <!-- OSAKA D5-D7 -->
+      <circle cx="308" cy="210" r="10" fill="#e0784a" stroke="#faf8f4" stroke-width="2.5" filter="url(#jp-shadow)"/>
+      <text x="308" y="214" font-family="monospace" font-size="9" fill="white" text-anchor="middle" font-weight="bold">5-7</text>
+      <rect x="248" y="200" width="55" height="18" rx="3" fill="#e0784a" opacity="0.95"/>
+      <text x="275" y="212" font-family="sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Osaka</text>
+
+      <!-- KANAZAWA D7-D9 -->
+      <circle cx="354" cy="180" r="9" fill="#78c060" stroke="#faf8f4" stroke-width="2.5" filter="url(#jp-shadow)"/>
+      <text x="354" y="184" font-family="monospace" font-size="9" fill="#0a1a06" text-anchor="middle" font-weight="bold">7-9</text>
+      <rect x="314" y="168" width="78" height="17" rx="3" fill="#78c060" opacity="0.95"/>
+      <text x="353" y="180" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0a1a06" text-anchor="middle">Kanazawa</text>
+
+      <!-- ══ LEGEND ══ -->
+      <rect x="16" y="340" width="195" height="125" rx="6" fill="rgba(18,20,16,0.85)" filter="url(#jp-shadow)"/>
+      <text x="28" y="360" font-family="monospace" font-size="11" fill="#c4a35a" letter-spacing="2" font-weight="bold">LEYENDA</text>
+      <line x1="28" y1="364" x2="198" y2="364" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+      <circle cx="34" cy="378" r="5" fill="#c4a35a"/>
+      <text x="45" y="382" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Tokio (llegada · compras)</text>
+
+      <circle cx="34" cy="396" r="5" fill="#4ab8e0"/>
+      <text x="45" y="400" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Hokkaido (D1–D4)</text>
+
+      <circle cx="34" cy="414" r="5" fill="#e0784a"/>
+      <text x="45" y="418" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Osaka (D5–D7)</text>
+
+      <circle cx="34" cy="432" r="5" fill="#78c060"/>
+      <text x="45" y="436" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Kanazawa (D7–D9)</text>
+
+      <!-- flight dashed -->
+      <line x1="26" y1="450" x2="54" y2="450" stroke="#c4a35a" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="60" y="454" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">Vuelo</text>
+      <!-- train dashed -->
+      <line x1="26" y1="462" x2="54" y2="462" stroke="#78c060" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="60" y="466" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">Tren (Shinkansen)</text>
+
+      <!-- COMPASS -->
+      <g transform="translate(652,38)">
+        <circle r="18" fill="rgba(255,255,255,0.08)"/>
+        <text x="0" y="-4" font-family="monospace" font-size="11" fill="#c4a35a" text-anchor="middle" font-weight="bold">N</text>
+        <line x1="0" y1="-14" x2="0" y2="-2" stroke="#c4a35a" stroke-width="2"/>
+        <line x1="0" y1="3" x2="0" y2="13" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <line x1="-13" y1="0" x2="13" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      </g>
+
+      <!-- STATS BADGE -->
+      <rect x="510" y="380" width="172" height="80" rx="6" fill="rgba(18,20,16,0.85)"/>
+      <text x="596" y="400" font-family="monospace" font-size="9" fill="#c4a35a" text-anchor="middle" letter-spacing="2">10 DÍAS · 4 CIUDADES</text>
+      <line x1="520" y1="406" x2="672" y2="406" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="596" y="422" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">13–22 Agosto 2026</text>
+      <text x="596" y="438" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Grupo de 4 · Budget alto</text>
+      <text x="596" y="452" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">2 vuelos domésticos · JR Pass</text>
+    </svg>
+  </div>
+
+  <div class="section-eyebrow">Itinerario completo</div>
+  <h2 class="section-title">El viaje de un vistazo</h2>
+  <table class="itin-table">
+    <thead><tr><th>Día</th><th>Fecha</th><th>Destino</th><th>Transporte</th><th>Momentos clave</th></tr></thead>
+    <tbody>
+      <tr><td class="day-num-cell">01</td><td class="date-cell">Wed 13 Ago</td><td><span class="city-pill tok">Tokio</span> → <span class="city-pill hok">Sapporo</span></td><td class="transport-cell">Land 08:00 · Fly HND→CTS 17:00</td><td class="highlight-cell">Shimokitazawa morning · Susukino dinner</td></tr>
+      <tr><td class="day-num-cell">02</td><td class="date-cell">Thu 14 Ago</td><td><span class="city-pill hok">Sapporo</span></td><td class="transport-cell">—</td><td class="highlight-cell">Mercado Nijo · Maruyama · Tempura Araki ★★</td></tr>
+      <tr><td class="day-num-cell">03</td><td class="date-cell">Fri 15 Ago</td><td><span class="city-pill hok">Otaru</span></td><td class="transport-cell">JR from Sapporo · 40 min</td><td class="highlight-cell">Mercado Sankaku · Sushiya-dori · Canal · Sake</td></tr>
+      <tr><td class="day-num-cell">04</td><td class="date-cell">Sat 16 Ago</td><td><span class="city-pill hok">Shakotan</span></td><td class="transport-cell">JR to Yoichi · Rental car</td><td class="highlight-cell">Nikka Whisky · Uni bowl · Cape Kamui · Costa Shimamui</td></tr>
+      <tr><td class="day-num-cell">05</td><td class="date-cell">Sun 17 Ago</td><td><span class="city-pill hok">Sapporo</span> → <span class="city-pill osa">Osaka</span></td><td class="transport-cell">Vuelo CTS→ITM 08:00</td><td class="highlight-cell">Kuromon Market · Shinsekai · Hozenji · Fine dining</td></tr>
+      <tr><td class="day-num-cell">06</td><td class="date-cell">Mon 18 Ago</td><td><span class="city-pill osa">Osaka</span></td><td class="transport-cell">—</td><td class="highlight-cell">Nakazakicho · Okonomiyaki · Shinsaibashi craft · Yakiniku</td></tr>
+      <tr><td class="day-num-cell">07</td><td class="date-cell">Tue 19 Ago</td><td><span class="city-pill osa">Osaka</span> → <span class="city-pill kan">Kanazawa</span></td><td class="transport-cell">Thunderbird + Shinkansen 16:30 → 18:50</td><td class="highlight-cell">Sumiyoshi Taisha · Higashi Chaya dusk · Komatsu Yasuke</td></tr>
+      <tr><td class="day-num-cell">08</td><td class="date-cell">Wed 20 Ago</td><td><span class="city-pill kan">Kanazawa</span></td><td class="transport-cell">—</td><td class="highlight-cell">Kenroku-en · Gold leaf workshop · 21C Museum · Oden</td></tr>
+      <tr><td class="day-num-cell">09</td><td class="date-cell">Thu 21 Ago</td><td><span class="city-pill kan">Kanazawa</span> → <span class="city-pill tok">Tokio</span></td><td class="transport-cell">Kagayaki Shinkansen 10:00 → 12:28</td><td class="highlight-cell">Higashi Chaya morning · Shopping · Final dinner</td></tr>
+      <tr><td class="day-num-cell">10</td><td class="date-cell">Fri 22 Ago</td><td><span class="city-pill tok">Tokio</span></td><td class="transport-cell">Fly HND 19:00</td><td class="highlight-cell">Yanaka · Cold soba · Salida</td></tr>
+    </tbody>
+  </table>
+
+  <!-- DESTINATIONS -->
+  <div class="section-eyebrow">Destinos</div>
+  <h2 class="section-title">Destinos</h2>
+  <div class="dest-grid">
+
+    <div class="dest-card">
+      <div class="dest-card-header">
+        <div><div class="dest-name">Tokio</div></div>
+        <span class="dest-days-badge tok">D1 · D9 · D10</span>
+      </div>
+      <p class="dest-desc">La capital de Japón aparece en ambos extremos del viaje: primero como día de tránsito con una mañana real en la ciudad, luego como base de compras y salida. Tokio se usa de forma deliberada, sin sobreexplotarlo: ya lo conocéis, y el viaje está diseñado para mostraros sus mejores caras sin gastar días en lo obvio.</p>
+      <ul class="dest-highlights">
+        <li>Shimokitazawa — música independiente, vintage, energía de barrio auténtico</li>
+        <li>Yanaka — calles Edo de shitamachi, tiendas de madera preservadas, gatos</li>
+        <li>Map Camera Shinjuku — mejor selección de cámaras de segunda mano de Japón</li>
+        <li>Cibone / D&Department — la mejor selección de diseño japonés contemporáneo</li>
+        <li>Uniqlo + GU flagships — mejor stock que en cualquier otra ciudad</li>
+      </ul>
+      <div class="dest-climate">Ago: 33–36°C · Humedad muy alta · Planear actividades interiores 12–15h</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dest-card-header">
+        <div><div class="dest-name"><em>Sapporo</em></div></div>
+        <span class="dest-days-badge hok">D1 · D2 · D4 · D5</span>
+      </div>
+      <p class="dest-desc">La capital de Hokkaido es la ciudad gastronómica más infravaluada de Japón. Rodeada de mar por tres lados, con su propia tradición de ramen, los mejores lácteos del país y una escena Michelin que supera con creces su perfil. Compacta, peatonal, y en agosto un alivio respecto al calor de Honshu.</p>
+      <ul class="dest-highlights">
+        <li>Mercado Nijo — marisco vivo al amanecer, el mejor kaisendon de Japón</li>
+        <li>Tempura Araki ★★ — ingredientes de Hokkaido, artesanía extraordinaria</li>
+        <li>Sushi Miyakawa ★★★ — the only 3-star sushi outside Tokio/Osaka/Kyoto</li>
+        <li>Susukino — el barrio nocturno de Hokkaido: ramen yokocho, izakayas, sake</li>
+        <li>Maruyama — barrio residencial con las mejores tiendas de artesanía del país</li>
+      </ul>
+      <div class="dest-climate">Ago: 22–27°C · Humedad baja · Mejor clima de Japón para viajar en verano</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dest-card-header">
+        <div><div class="dest-name">Otaru</div></div>
+        <span class="dest-days-badge hok">D3</span>
+      </div>
+      <p class="dest-desc">A 40 minutos de Sapporo en tren, Otaru es una ciudad portuaria de la era Meiji conservada que impulsó la economía de Hokkaido. Almacenes de piedra junto a un canal de 1923, una calle de legendarios restaurantes de sushi, talleres de soplado de vidrio, cervecerías de sake y una tradición de wagashi que se remonta 150 años. Un día completo sin esfuerzo.</p>
+      <ul class="dest-highlights">
+        <li>Sushiya-dori — calle entera de sushi de primer nivel con la pesca del día</li>
+        <li>Taller wagashi Tsukushi Makita — 400 moldes antiguos, maestro de segunda generación</li>
+        <li>Kitaichi Glass — tradición viva de soplado de vidrio en almacén Meiji</li>
+        <li>Cervecería Tanakashuzou — sake elaborado ininterrumpidamente desde 1899</li>
+        <li>El canal a la hora dorada — genuinamente bello, no solo postales</li>
+      </ul>
+      <div class="dest-climate">Ago: 23–27°C · Brisa marina · Cómodo todo el día</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dest-card-header">
+        <div><div class="dest-name"><em>Shakotan</em></div></div>
+        <span class="dest-days-badge hok">D4</span>
+      </div>
+      <p class="dest-desc">La Península de Shakotan es el lado salvaje y remoto de Hokkaido: una costa dentada de acantilados y pueblos pesqueros que se adentran en el Mar de Japón. El agua aquí es azul cobalto (los erizos de mar comen toda el alga, dejando la roca blanca visible a través del agua transparente), el marisco es extraordinario, y el paisaje no tiene equivalente en Japón. Este es el día que le da reputación al viaje.</p>
+      <ul class="dest-highlights">
+        <li>Osyokujidokoro Misaki — 20 boles de uni al día, gestionado por pescadores desde 1973, temporada pico agosto</li>
+        <li>Cabo Kamui — paseo por la cresta sobre el Azul de Shakotan, Roca Kamui, 40 min ida y vuelta</li>
+        <li>Costa Shimamui — entre las 100 mejores playas de Japón, se sale de un túnel hacia un mar violeta</li>
+        <li>Destilería Nikka Whisky — cuna del whisky japonés, ladrillo victoriano rojo, 1934</li>
+        <li>Pueblo pesquero Bikuni — turismo nulo, redes secando, tiendas locales de calamar</li>
+      </ul>
+      <div class="dest-climate">Ago: 20–26°C · Viento en cabos · Cómodo · Coche de alquiler imprescindible</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dest-card-header">
+        <div><div class="dest-name">Osaka</div></div>
+        <span class="dest-days-badge osa">D5 · D6 · D7</span>
+      </div>
+      <p class="dest-desc">La ciudad más honesta de Japón: menos pulida que Tokio, más entregada a la comida, la vida callejera y el placer de lo cotidiano. Osaka inventó el takoyaki, el okonomiyaki y el kushikatsu. Tiene una escena Michelin que rivaliza con la capital, un barrio (Nakazakicho) que resiste la gentrificación, un mercado (Kuromon) que alimenta a la ciudad desde hace 200 años, y una confianza estética que a Tokio a veces le falta.</p>
+      <ul class="dest-highlights">
+        <li>Mercado Kuromon — 170 puestos, la cocina de la ciudad desde el período Edo</li>
+        <li>Nakazakicho — antiguas machiya convertidas en estudios de diseño y concept stores</li>
+        <li>Hozenji Yokocho — callejón cubierto de musgo, atmósfera de los años 30, intacto</li>
+        <li>Shinsekai — barrio de entretenimiento de 1912, intacto, sin pretensiones</li>
+        <li>Compras artesanales en Shinsaibashi — Minä Perhonen, laca, objetos de bambú</li>
+      </ul>
+      <div class="dest-climate">Ago: 34–37°C · Humedad muy alta · El clima más exigente del viaje</div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dest-card-header">
+        <div><div class="dest-name"><em>Kanazawa</em></div></div>
+        <span class="dest-days-badge kan">D7 · D8 · D9</span>
+      </div>
+      <p class="dest-desc">La ciudad medieval mejor conservada de Japón — y el contraste más fuerte con todo lo demás del viaje. La ciudad castillo del clan Maeda escapó a los bombardeos de la Segunda Guerra Mundial y conservó todo: barrios samurái, barrios de geishas, el mercado cubierto más antiguo de Japón, uno de los tres grandes jardines. La colección nacional de artesanía fue trasladada aquí desde Tokio en 2020. Kanazawa produce el 99% de la hoja de oro de Japón. Su sushi proviene del Mar de Japón, no del Pacífico — un vocabulario completamente diferente.</p>
+      <ul class="dest-highlights">
+        <li>Komatsu Yasuke — maestro del sushi de 93 años, llamado "el Jiro del Mar de Japón"</li>
+        <li>Museo del Siglo XXI — arquitectura SANAA, luz de Turrell, la Piscina de Erlich</li>
+        <li>Museo Nacional de Artesanía — colección nacional completa, trasladada desde Tokio</li>
+        <li>Taller de hoja de oro — 99% de la producción de Japón, sesión práctica de 90 min</li>
+        <li>Kenroku-en al amanecer — uno de los tres grandes jardines de Japón, gratis antes de las 08:00</li>
+      </ul>
+      <div class="dest-climate">Ago: 29–33°C · Húmedo pero manejable · Mejor al amanecer y al atardecer</div>
+    </div>
+
+  </div>
+
+  <!-- RESERVATIONS MASTER TABLE -->
+  <div class="section-eyebrow">Vuelos y transportes clave</div>
+  <h2 class="section-title">Transportes del viaje</h2>
+  <table class="res-table">
+    <thead><tr><th>Día</th><th>Trayecto</th><th>Medio</th><th>Reserva</th><th>Notas</th></tr></thead>
+    <tbody>
+      <tr><td>D1 · 13 Ago</td><td><strong>Tokio HND → Sapporo CTS</strong></td><td>✈ Vuelo ~1h 35min</td><td>jal.co.jp / ana.co.jp</td><td>JL525 (17:30) o NH73 (17:00) · Agosto pico · Reservar con antelación</td></tr>
+      <tr><td>D1 · 13 Ago</td><td><strong>Keikyu Line HND → Shimokitazawa</strong></td><td>🚆 Tren 35 min</td><td>Sin reserva · Suica</td><td>Shinagawa en 11 min · transbordo línea Odakyu</td></tr>
+      <tr><td>D3 · 15 Ago</td><td><strong>Sapporo → Otaru</strong></td><td>🚆 JR Rapid 40 min</td><td>Sin reserva · JR Pass</td><td>Cada 30 min · ¥750 · Último tren regreso ~23:00</td></tr>
+      <tr><td>D4 · 16 Ago</td><td><strong>Sapporo → Yoichi · Shakotan en coche</strong></td><td>🚆+🚗 JR 1h + Alquiler</td><td>Times Car Rental · timescar.jp</td><td>Sábado agosto = pico · Reservar 4–6 semanas antes · Auto 4 plazas</td></tr>
+      <tr><td>D5 · 17 Ago</td><td><strong>Sapporo CTS → Osaka ITM</strong></td><td>✈ Vuelo ~2h</td><td>jal.co.jp / ana.co.jp</td><td>Salida 08:00 · Volar a Itami, no KIX · NH772 o JL2000</td></tr>
+      <tr><td>D7 · 19 Ago</td><td><strong>Osaka → Kanazawa</strong></td><td>🚆 Thunderbird + Shinkansen ~2h 20min</td><td>JR Pass · reservar asiento</td><td>Salida Osaka ~16:30 · Transbordo Tsuruga · Llegada ~18:50</td></tr>
+      <tr><td>D9 · 21 Ago</td><td><strong>Kanazawa → Tokio</strong></td><td>🚆 Kagayaki Shinkansen 2h 28min</td><td>JR Pass · reservar asiento</td><td>Salida ~10:00 · Llegada Tokio ~12:28 · Asientos siempre reservados</td></tr>
+      <tr><td>Todo</td><td><strong>JR Pass + reservas de asiento</strong></td><td>—</td><td>jrpass.com o en Japón</td><td>Cubre Thunderbird + Kagayaki · Reservar en cualquier oficina JR</td></tr>
+    </tbody>
+  </table>
+
+    <!-- HOTELS -->
+  <div class="section-eyebrow">Dónde alojarse</div>
+  <h2 class="section-title">Zonas y hoteles recomendados</h2>
+  <div class="hotel-grid">
+    <div class="hotel-card">
+      <div class="hotel-city">Tokio · D1 night</div>
+      <div class="hotel-area">Zona aeropuerto / No necesario</div>
+      <div class="hotel-picks">
+        Llegas, pasas la mañana en Shimokitazawa y vuelas a las 17:00. <strong>No es necesario hotel en Tokio el 13 de agosto.</strong> Si tu vuelo internacional llega el día anterior, cualquier hotel en Shinjuku o Shibuya funciona.
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-city">Sapporo · D1–D4</div>
+      <div class="hotel-area">Susukino u Odori</div>
+      <div class="hotel-picks">
+        A distancia a pie del Mercado Nijo, Susukino y la Estación de Sapporo.
+        <strong>JR Tower Hotel Nikko Sapporo</strong> — directly above the station, excellent.
+        <strong>The Knot Sapporo</strong> — design-forward, Susukino.
+        <strong>Cross Hotel Sapporo</strong> — mid-range, central.
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-city">Osaka · D5–D7</div>
+      <div class="hotel-area">Namba o Shinsaibashi</div>
+      <div class="hotel-picks">
+        A distancia a pie de todo. Evitar Umeda para este itinerario.
+        <strong>Cross Hotel Osaka</strong> — design, well-priced, Shinsaibashi.
+        <strong>Intercontinental Osaka</strong> — splurge, Umeda (10 min walk or taxi).
+        <strong>Dormy Inn Premium Namba</strong> — excellent value, onsen.
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-city">Kanazawa · D7–D9</div>
+      <div class="hotel-area">Katamachi o Korinbo</div>
+      <div class="hotel-picks">
+        Central, accesible a pie a todos los barrios.
+        <strong>Kanazawa Tokyu Hotel</strong> — reliable, good location.
+        <strong>ANA Crowne Plaza Kanazawa</strong> — larger, near station.
+        <strong>Koko Hotel Kanazawa</strong> — newer, design-conscious, excellent value.
+      </div>
+    </div>
+  </div>
+  <!-- spacer for Tokio D9-10 -->
+  <div class="hotel-grid" style="margin-bottom:0">
+    <div class="hotel-card">
+      <div class="hotel-city">Tokio · D9–D10</div>
+      <div class="hotel-area">Shinjuku o Shibuya</div>
+      <div class="hotel-picks">
+        Ideal para compras y conexión con el aeropuerto de Haneda.
+        <strong>Park Hyatt Shinjuku</strong> — iconic, splurge.
+        <strong>Cerulean Tower Shibuya</strong> — strong location, excellent views.
+        <strong>Shinjuku Granbell Hotel</strong> — design boutique, great value.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ CONSEJOS ══ -->
+  <div class="section-eyebrow">Antes de ir</div>
+  <h2 class="section-title" style="font-family:var(--serif);font-size:28px;font-weight:400;font-style:italic;margin-bottom:28px">Consejos prácticos</h2>
+
+  <div class="tips-grid">
+
+    <!-- DINERO -->
+    <div class="tip-card">
+      <div class="tip-icon">💴</div>
+      <div class="tip-content">
+        <div class="tip-title">Dinero y efectivo</div>
+        <div class="tip-text">Japón sigue siendo una sociedad muy orientada al efectivo. Llevar siempre yenes encima — muchos restaurantes pequeños, mercados y templos solo aceptan cash. Los cajeros de <strong>7-Eleven y Japan Post</strong> aceptan tarjetas extranjeras sin problema. Los grandes restaurantes y hoteles aceptan Visa/Mastercard.</div>
+      </div>
+    </div>
+
+    <!-- JR PASS -->
+    <div class="tip-card">
+      <div class="tip-icon">🚄</div>
+      <div class="tip-content">
+        <div class="tip-title">JR Pass — canjear en Japón</div>
+        <div class="tip-text">Comprar el JR Pass antes de salir de España (es más barato y no se puede adquirir en Japón). Canjear el voucher en cualquier oficina JR al llegar. El pass cubre Thunderbird y Kagayaki pero <strong>los asientos hay que reservarlos</strong> por separado en cualquier taquilla JR — sin coste adicional con el pass.</div>
+      </div>
+    </div>
+
+    <!-- SIM / CONECTIVIDAD -->
+    <div class="tip-card">
+      <div class="tip-icon">📱</div>
+      <div class="tip-content">
+        <div class="tip-title">Conectividad — SIM o eSIM</div>
+        <div class="tip-text">Imprescindible para mapas y traducción en tiempo real. Opciones: <strong>eSIM de IIJmio o Ubigi</strong> (activar antes de salir, ilimitada, ~15€/10 días) o comprar una SIM de datos en el aeropuerto de Haneda (más caro, ~30€). Alternativa: router WiFi portátil — mejor para grupos que comparten mapas.</div>
+      </div>
+    </div>
+
+    <!-- APPS ESENCIALES -->
+    <div class="tip-card">
+      <div class="tip-icon">🗾</div>
+      <div class="tip-content">
+        <div class="tip-title">Apps imprescindibles</div>
+        <div class="tip-text"><strong>Google Maps</strong> — funciona bien para transporte público en Japón. <strong>Hyperdia o Navitime</strong> para shinkansen y trenes exactos. <strong>Google Translate</strong> con descarga de japonés offline (cámara para leer menús). <strong>Tabelog</strong> para buscar restaurantes locales con valoraciones reales. <strong>IC Card (Suica)</strong> para pagar metro y transporte.</div>
+      </div>
+    </div>
+
+    <!-- SUICA -->
+    <div class="tip-card">
+      <div class="tip-icon">🃏</div>
+      <div class="tip-content">
+        <div class="tip-title">Tarjeta Suica — cargar desde el avión</div>
+        <div class="tip-text">La tarjeta Suica (IC card recargable) cubre metro, autobuses, trenes urbanos, kombini y máquinas expendedoras. Desde 2023 se puede añadir al <strong>Apple Wallet o Google Pay</strong> antes de llegar — recomendable hacerlo en el avión. Si prefieres tarjeta física, comprar en cualquier máquina de Haneda al llegar.</div>
+      </div>
+    </div>
+
+    <!-- ETIQUETA -->
+    <div class="tip-card">
+      <div class="tip-icon">🙏</div>
+      <div class="tip-content">
+        <div class="tip-title">Etiqueta básica japonesa</div>
+        <div class="tip-text">No comer ni beber caminando por la calle (en restaurantes y mercados sí). No hablar en voz alta en el metro — los japoneses viajan en silencio. Las propinas están absolutamente prohibidas: son una ofensa. Quitarse los zapatos al entrar a muchos restaurantes y alojamientos tradicionales. La cola es sagrada: respetar siempre el orden.</div>
+      </div>
+    </div>
+
+    <!-- CLIMA AGOSTO -->
+    <div class="tip-card">
+      <div class="tip-icon">🌡️</div>
+      <div class="tip-content">
+        <div class="tip-title">Clima en agosto — gestionar el calor</div>
+        <div class="tip-text">Tokio y Osaka en agosto: 34–37°C con humedad muy alta. Estrategia: actividades exteriores antes de las 11h y después de las 17h. Museos y espacios con AC para el mediodía. <strong>Hokkaido y Kanazawa</strong> son considerablemente más frescos. Llevar abanicos, toallas frías y ropa de lino o algodón — los japoneses lo usan todo.</div>
+      </div>
+    </div>
+
+    <!-- ALERGIA -->
+    <div class="tip-card tip-card--alert">
+      <div class="tip-icon">⚠️</div>
+      <div class="tip-content">
+        <div class="tip-title">Gestionar la alergia a frutos secos en Japón</div>
+        <div class="tip-text">Llevar siempre escrita en japonés la alergia: <strong>「ナッツアレルギーがあります。アーモンド、カシューナッツ、ピスタチオ、ピーナッツ、くるみは食べられません」</strong> — mostrar al camarero antes de pedir. Los frutos secos no son tan comunes como en la cocina occidental, pero sí aparecen en: algunos curries, postres kaiseki, aderezos de ensalada y tartas de té matcha. El sésamo <strong>NO</strong> es un fruto seco y no supone riesgo.</div>
+      </div>
+    </div>
+
+    <!-- ONSEN -->
+    <div class="tip-card">
+      <div class="tip-icon">♨️</div>
+      <div class="tip-content">
+        <div class="tip-title">Onsen — baños termales</div>
+        <div class="tip-text">Si el hotel tiene onsen (baños termales), úsalos — es una de las experiencias más japonesas del viaje. Reglas básicas: ducharse exhaustivamente antes de entrar, no llevar toalla al agua (solo en el borde), entrar desnudo (no hay bañador). Muchos onsen tienen prohibición para personas con tatuajes — verificar antes.</div>
+      </div>
+    </div>
+
+    <!-- KONBINI -->
+    <div class="tip-card">
+      <div class="tip-icon">🏪</div>
+      <div class="tip-content">
+        <div class="tip-title">Konbini — las tiendas de conveniencia</div>
+        <div class="tip-text">7-Eleven, FamilyMart y Lawson son instituciones nacionales, no tiendas de barrio. Abiertas 24h, tienen: onigiri frescos, sándwiches de buena calidad, café recién hecho, ATMs internacionales, impresoras, y en algunos puedes recoger paquetes. El desayuno de konbini en una mañana de viaje largo es completamente válido.</div>
+      </div>
+    </div>
+
+    <!-- IDIOMA -->
+    <div class="tip-card">
+      <div class="tip-icon">🗣️</div>
+      <div class="tip-content">
+        <div class="tip-title">Idioma — navegar sin inglés</div>
+        <div class="tip-text">Fuera de Tokio y los grandes hoteles, el inglés es escaso. Estrategias: Google Translate con cámara para leer menús y carteles, señalar en el menú en lugar de pronunciar, usar Google Maps para mostrar destinos en japonés al taxista. Los japoneses son extremadamente serviciales con los extranjeros desorientados — no dudar en pedir ayuda.</div>
+      </div>
+    </div>
+
+    <!-- RESERVAS -->
+    <div class="tip-card tip-card--alert">
+      <div class="tip-icon">📋</div>
+      <div class="tip-content">
+        <div class="tip-title">Reservas — hacerlo ya</div>
+        <div class="tip-text">Agosto es el mes de mayor demanda en Japón (vacaciones nacionales de Obon). Prioridad inmediata: <strong>Tempura Araki ★★</strong> (Sapporo), <strong>Sushi Miyakawa ★★★</strong> (Sapporo), <strong>Komatsu Yasuke</strong> (Kanazawa), vuelos HND→CTS y CTS→ITM, hotel en Sapporo. Los restaurantes Michelin aceptan reservas con 2–3 meses de antelación como mínimo — ya vais con el tiempo justo.</div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div><!-- /sum-body -->
+</div><!-- /panel-summary -->
+
+<!-- ════════════ DAY 1 ════════════ -->
+<div class="panel" id="panel-d1">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 1 de 10</div>
+    <div class="dh-date">Jueves, 13 de agosto</div>
+    <div class="dh-cities"><span class="city-pill tok">Tokio</span> → <span class="city-pill hok">Sapporo</span></div>
+    <div class="dh-summary">You land at 08:00 after a long international flight. The plan is deliberately light: clear immigration, ship your large bags north via Yamato Takuhaibin (they arrive at your Sapporo hotel tomorrow), and take the Keikyu Line into the city within 90 minutes of landing. Shimokitazawa is the right call — independent record shops, good coffee, no tourist pressure. Lunch, then a relaxed return to Haneda for a 17:00 flight. You're in Sapporo by 20:00, and Ramen Yokocho is open late. First night, easy landing.</div>
+  </div>
+  <div class="dh-climate">Tokio 13 Ago<br>33°C · Humedad alta<br>Sapporo 13 Ago<br>24°C · Cómodo<br><br>Vuelo: JL525 / NH73<br>Salida HND 17:00–17:30<br>Llegada CTS ~18:35–19:05</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Acción necesaria</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>HND→CTS Flight · JL525 or NH73</strong></td><td>Book at jal.co.jp or ana.co.jp</td><td>Agosto pico · Reservar inmediatamente · Salida a las 17:00 o 17:30</td></tr>
+        <tr><td>Yamato Takuhaibin luggage forwarding</td><td>Sin reserva necesaria</td><td>Mostrador en llegadas HND T3 · rellenar al llegar · ¥2.000/maleta</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tr-card">
+    <div class="tr-from">HND T3 Internacional</div>
+    <div class="tr-mid">Línea Keikyu Airport → Shinagawa → Shimokitazawa</div>
+    <div class="tr-to">Shimokitazawa</div>
+    <div class="tr-badge">35 min total</div>
+    <div class="tr-detail">Keikyu de T3 a Shinagawa (11 min) · Transbordo a Línea Odakyu → Shimokitazawa (20 min) · Total ¥540 · La tarjeta Suica cubre todos los trayectos</div>
+  </div>
+
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">08:00</div>
+      <div class="b-body">
+        <div class="b-name">Llegada a Haneda Terminal 3</div>
+        <div class="b-sub">Inmigración · Equipaje · Logística aeroportuaria</div>
+        <div class="b-desc">Pasar inmigración (reservar 45–60 min con avión lleno). Recoger maletas. Ir directamente al <strong>mostrador Yamato Takuhaibin en la sala de llegadas</strong> — enviar el equipaje grande al hotel de Sapporo. Rellenar un formulario, pagar ¥2.000 por maleta, llegan mañana por la mañana. Comprar o cargar una tarjeta Suica IC en las máquinas cerca de la salida. Ahora viajáis ligeros.</div>
+        <div class="flags"><span class="flag note">Domestic flights depart from T2 · Keikyu connects all terminals · No need to go to T2 until 14:30</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">09:45</div>
+      <div class="b-body">
+        <div class="b-name">Shimokitazawa — <em>Morning in Tokio</em></div>
+        <div class="b-sub">下北沢 · Barrio independiente · Sin turistas</div>
+        <div class="b-desc">Take Keikyu to Shinagawa, Odakyu Line to Shimokitazawa. The neighbourhood that resists gentrification. Small live music venues, independent vinyl shops, coffee roasters, pre-owned clothing that's actually curated. <strong>Bear Pond Espresso</strong> opens at 10:00 — one of the most serious coffee operations in Tokio. Walk the slope streets, browse at your own pace. Nothing here requires a plan.</div>
+        <div class="flags"><span class="flag ok">Intensidad baja · Buena introducción para un día de viaje</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">12:00</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Shimokitazawa</em></div>
+        <div class="b-sub">Ramen o soba frío · Locales del barrio</div>
+        <div class="b-desc"><em>Sugerencia:</em> <strong>Ramen Zund-Bar</strong>: mostrador de ramen de pollo paitan de culto, muy poca capacidad, solo locales. O <strong>Hanabi soba</strong> para fideos fríos — más ligero y mejor para el calor de agosto. Cualquiera de los dos se termina en 40 minutos.</div>
+        <div class="flags">
+          <span class="flag ok">FSec: El ramen no contiene frutos secos — seguro</span>
+          <span class="flag ok">Soba frío: sin lácteos · sin riesgo de frutos secos · seguro para ambos</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">13:00</div>
+      <div class="b-body">
+        <div class="b-name">Café + paseo — <em>Daikanyama o Nakameguro</em></div>
+        <div class="b-sub">A 10 min de Shimokitazawa en tren · Ambiente de barrio tranquilo</div>
+        <div class="b-desc">Tras la comida, un café en calma antes de volver al aeropuerto. <strong>Daikanyama</strong> (10 min en tren desde Shimokitazawa) tiene algunas de las mejores cafeterías de Tokio: <strong>Log Road Daikanyama</strong> o <strong>Ivy Place</strong> para un café sentado con buena luz. O paseo corto por el <strong>canal Nakameguro</strong> — verde, tranquilo, completamente ajeno al turismo de masa. Sin prisa.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">15:00</div>
+      <div class="b-body">
+        <div class="b-name">Regreso a Haneda · Terminal doméstica</div>
+        <div class="b-sub">HND Terminal 2 · JAL / ANA doméstico</div>
+        <div class="b-desc">Odakyu de regreso a Shinagawa, Keikyu a Haneda T2. Llegar al terminal doméstico sobre las <strong>15:30</strong> — 1h 30min antes de la salida, cómodo para doméstico. El <strong>Salón JAL Sakura</strong> o <strong>Salón ANA</strong> están disponibles con billetes premium; ambos sirven comida ligera y tienen duchas. Buen momento tras una llegada de largo recorrido.</div>
+        <div class="flags"><span class="flag note">T2 es JAL/ANA doméstico · No T3 donde se aterriza internacionalmente</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">17:00</div>
+      <div class="b-body">
+        <div class="b-name">✈ HND → CTS · JL525 / NH73</div>
+        <div class="b-sub">1h 35min · Boeing 787 · Aterrizaje ~18:35–19:05</div>
+        <div class="b-desc">JR Rapid Airport Express de New Chitose a la Estación de Sapporo: 37 min, cada 15 minutos. <strong>En la ciudad de Sapporo hacia las ~20:00.</strong></div>
+        <div class="flags"><span class="flag star">Reservar: JL525 (JAL, 17:30) o NH73 (ANA, 17:00)</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">20:00</div>
+      <div class="b-body">
+        <div class="b-name">Check-in · Ramen Yokocho</div>
+        <div class="b-sub">ラーメン横丁 · Susukino · Abre hasta tarde</div>
+        <div class="b-desc">Check-in en el hotel, después pasear hasta Susukino. <strong>Ramen Yokocho</strong> (el callejón del ramen) son 17 pequeños puestos en un estrecho corredor — el mejor ramen de miso de Sapporo, abierto hasta medianoche. Pedir en <strong>Menya Saimi</strong> o <strong>Misogin</strong>. Cerveza ligera de Hokkaido después. Noche temprana — mañana es un día completo.</div>
+        <div class="flags">
+          <span class="flag ok">FSec: El ramen de miso no contiene frutos secos — seguro</span>
+          <span class="flag warn">LACTOSA: topping de mantequilla/maíz — pedir que no lo pongan: バターなしで</span>
+          <span class="flag ok">El caldo en sí está libre de lácteos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button disabled>← Resumen</button><button onclick="showPanel('d2')">Día 2 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 2 ════════════ -->
+<div class="panel" id="panel-d2">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 2 de 10</div>
+    <div class="dh-date">Viernes, 14 de agosto</div>
+    <div class="dh-cities"><span class="city-pill hok">Sapporo</span></div>
+    <div class="dh-summary">Un día completo en Sapporo, estructurado en torno al mejor mercado de la ciudad, su barrio más interesante y la reserva de cena más importante de la etapa de Hokkaido. El Mercado Nijo al amanecer marca el tono: cangrejos vivos, erizo de mar, cuencos de arroz comidos de pie. Después Maruyama, la joya residencial de Sapporo: una tienda de artesanía que merece una hora, un santuario tranquilo en el bosque, excelente café. La tarde es para el mirador de Okurayama, la ciudad desde arriba. Esta noche: Tempura Araki, dos estrellas Michelin, la mejor razón para estar en Sapporo.</div>
+  </div>
+  <div class="dh-climate">Sapporo 14 Ago<br>24–27°C · Humedad baja<br>Cómodo todo el día<br>Sin calor extremo</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Urgencia</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Tempura Araki ★★ · Dinner</strong></td><td>tableall.com · omakaseje.com · or direct</td><td>Book immediately · hardest reservation in Sapporo</td></tr>
+        <tr><td>Sushi Miyakawa ★★★ · Backup option</td><td>tableall.com</td><td>Book as fallback if Araki unavailable</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">08:00</div>
+      <div class="b-body">
+        <div class="b-name">Mercado Nijo</div>
+        <div class="b-sub">二条市場 · Marisco al amanecer · Mejor antes de las 09:30</div>
+        <div class="b-desc">Sapporo's oldest covered market — live king crab, Botan shrimp, sea urchin, scallops. The market opens at 06:00 but 08:00 is a good arrival: the light is right, the stalls are stocked, the early chaos has settled. <strong>Breakfast kaisendon</strong> at one of 5–6 counter restaurants inside — point at what you want, they build it in the bowl. August sea urchin from Hokkaido waters is exceptional.</div>
+        <div class="flags">
+          <span class="flag ok">Kaisendon: rice + raw seafood · safe for both travelers</span>
+          <span class="flag ok">FSec: El kaisendon no contiene frutos secos — seguro</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">09:30</div>
+      <div class="b-body">
+        <div class="b-name">Maruyama — <em>Exploración del barrio</em></div>
+        <div class="b-sub">円山 · Residencial · Artesanía · Santuario en el bosque</div>
+        <div class="b-desc">Subway to Maruyama-koen. The most characterful neighbourhood in Sapporo: old residential streets, excellent kissaten coffee shops, independent bookshops, and a small cluster of craft stores. <strong>Japanese Modern N6 Kita Maruyama</strong>: curated traditional Japanese crafts displayed like a gallery — lacquerware, ceramics, textiles. Then <strong>Hokkaido Shrine</strong>: set in a cool forested park, wooden torii gates, almost no visitors on a weekday morning. Coffee at a local roaster on the main street before moving on.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">12:00</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Soup Curry · Garaku</em></div>
+        <div class="b-sub">ガラク · Sapporo's signature dish · Susukino</div>
+        <div class="b-desc">Soup curry is a Sapporo invention: thin, aromatic broth (not a thick paste) with whole roasted vegetables and a protein, served with rice on the side. <strong>Garaku</strong> is the benchmark — chicken, lamb, or vegetable base, spice level 1–30. Order the chicken with all vegetables. Lunch queues form early; arrive by 12:00 or accept a short wait.</div>
+        <div class="flags">
+          <span class="flag ok">LÁCT: soup curry base is dairy-free</span>
+          <span class="flag warn">FSec: some garnishes include nuts — ask: ナッツなしで</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">14:00</div>
+      <div class="b-body">
+        <div class="b-name">Tanuki Koji + Compras de diseño</div>
+        <div class="b-sub">狸小路 · Galería cubierta · Artesanía regional y gastronomía</div>
+        <div class="b-desc">Sapporo's old covered merchant street — a mix of serious local shops and tourist goods. Focus on: the ceramics dealers on the side alleys, Hokkaido food importers in the basement of <strong>Daimaru department store</strong> (dried seafood, kombu, regional sake), and <strong>Kinokuniya</strong> for books and Hokkaido specialty foods. Skip the souvenir shops facing the main passage.</div>
+        <div class="flags"><span class="flag warn">LÁCT: white chocolate and dairy confections everywhere in Hokkaido · read labels carefully</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">16:00</div>
+      <div class="b-body">
+        <div class="b-name">Mirador Okurayama</div>
+        <div class="b-sub">大倉山展望台 · 307m · Juegos Olímpicos de Invierno 1972</div>
+        <div class="b-desc">The observation deck at the top of the 1972 Olympic ski jump ramp. Take the chairlift up. The view: Sapporo's entire grid spread across the Ishikari Plain, the sea visible in the distance on clear days. Completely uncrowded in August — ski season brings people, summer does not. 45 minutes is enough: go up, take the view, come back down.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">19:00</div>
+      <div class="b-body">
+        <div class="b-name">🍽️ Sugerencia de cena — <em>Tempura Araki</em> ★★ Michelin</div>
+        <div class="b-sub">天ぷらあら木 · Omakase · ~¥28,000pp · Reserve months ahead</div>
+        <div class="b-desc">Two Michelin stars. Omakase tempura using exclusively Hokkaido ingredients — sea urchin from Shakotan, seasonal vegetables, Ezo venison, Hokkaido shrimp — fried in ultra-light batter by a chef who trained in Tokio and returned north. Each piece is served at the counter at the exact moment it reaches perfection. In August, the course will feature peak-season uni. This is one of the finest dining experiences in Japan.</div>
+        <div class="flags">
+          <span class="flag star">★★ Michelin · Book via tableall.com or omakaseje.com immediately</span>
+          <span class="flag ok">LÁCT: tempura batter is dairy-free</span>
+          <span class="flag ok">FSec: La tempura no contiene frutos secos — confirmar ausencia de almendras o nueces en guarnición</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d1')">← Día 1</button><button onclick="showPanel('d3')">Día 3 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 3 ════════════ -->
+<div class="panel" id="panel-d3">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 3 de 10</div>
+    <div class="dh-date">Sábado, 15 de agosto</div>
+    <div class="dh-cities"><span class="city-pill hok">Otaru</span></div>
+    <div class="dh-summary">40 minutos al norte de Sapporo en tren, Otaru is a complete day with no effort required. The morning starts at Mercado Sankaku with whatever came in from the sea, continues along Sakaimachi Street through glassblowing studios and craft workshops, then settles into a leisurely omakase lunch on Sushiya-dori — Otaru's legendary sushi street. The wagashi workshop in the afternoon is hands-on and genuinely skilled. The canal at golden hour, sake tasting at a brewery that's been running since 1899, and a light dinner before the train back to Sapporo. An unhurried day in a city that rewards a slow pace.</div>
+  </div>
+  <div class="dh-climate">Otaru 15 Ago<br>23–27°C · Brisa marina<br>Cómodo todo el día<br>JR desde Sapporo: 40 min</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Wagashi Workshop · Tsukushi Makita</strong></td><td>hokkaido-treasure.com or direct contact</td><td>90 min · ~¥3,000pp · Book 2–4 weeks ahead · English available</td></tr>
+        <tr><td>Otaru Masazushi Zenan (sushi)</td><td>Walk-in recommended · or call ahead</td><td>Lunch reservation optional but useful on busy days</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tr-card">
+    <div class="tr-from">Sapporo Station</div>
+    <div class="tr-mid">JR Rapid Otaru (cada 30 min)</div>
+    <div class="tr-to">Otaru Station</div>
+    <div class="tr-badge">40 min · ¥750</div>
+    <div class="tr-detail">Salida ~08:30 · JR Pass válido · Último tren de regreso ~23:00 · Sin prisa</div>
+  </div>
+
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">09:15</div>
+      <div class="b-body">
+        <div class="b-name">Mercado Sankaku</div>
+        <div class="b-sub">三角市場 · 2 min de la estación · Más local que Nijo</div>
+        <div class="b-desc">A narrow covered market of fishmongers and counter restaurants. Smaller and more local than Sapporo's Nijo — serious buyers, direct from boats. Breakfast kaisendon: point at what's in the case, they assemble it. August sea urchin, snow crab, salmon roe. Eat at the counter, pay, walk. Done in 45 minutes.</div>
+        <div class="flags">
+          <span class="flag ok">Pure seafood on rice · safe for both travelers</span>
+          <span class="flag ok">FSec: Marisco sobre arroz — sin frutos secos · seguro</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">10:15</div>
+      <div class="b-body">
+        <div class="b-name">Calle Sakaimachi — <em>Vidrio y artesanía</em></div>
+        <div class="b-sub">堺町本通り · Almacenes Meiji · Mejor antes de las 11:00</div>
+        <div class="b-desc">Walk the full length of Sakaimachi Street (20 min) before tour buses arrive. <strong>Kitaichi Glass</strong>: the landmark glassblowing studio — watch master blowers working in a 1905 warehouse; pieces are for sale. <strong>Otaru Music Box Museum</strong>: 35,000 music boxes displayed in a 1927 building. Objects of genuine beauty and craft. The side alleys have smaller, less-visited workshops.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">11:30</div>
+      <div class="b-body">
+        <div class="b-name">Taller de Wagashi — <em>Tsukushi Makita</em></div>
+        <div class="b-sub">つくし牧田 · 90 min · Nerikiri · 400 moldes antiguos</div>
+        <div class="b-desc">The second-generation owner, Koji Makita, teaches <strong>nerikiri</strong>: soft Japanese sweets made from sweet bean paste, shaped into seasonal forms using wooden molds. His collection spans 400+ antique molds, some over 150 years old. You make 4 sweets and take them home. One of the most genuinely craft-focused experiences in Hokkaido — not a tourist attraction but a working confectionery with a living tradition.</div>
+        <div class="flags">
+          <span class="flag warn">FSec: azuki (red bean) paste is safe. Confirm no chestnut (栗) variants in your session. Ask at booking.</span>
+          <span class="flag warn">LÁCT: confirm no cream-filled wagashi in your session: 乳製品なしで</span>
+          <span class="flag note">Book via hokkaido-treasure.com · English available</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">13:30</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Sushiya-dori</em></div>
+        <div class="b-sub">寿司屋通り · Otaru Masazushi Zenan · Peak August uni</div>
+        <div class="b-desc"><strong>Otaru Masazushi Zenan</strong> on Sushiya-dori — an entire street of sushi restaurants supplied directly from the morning's catch. Masazushi sources from their own seafood store: Botan shrimp, mantis shrimp, abalone, sea urchin. August is uni peak season; the difference from Tokio sushi in ingredient freshness is significant. Omakase lunch or à la carte. The light wood interior, the hinoki counter, the white coat behind it — the whole composition is worth sitting in slowly.</div>
+        <div class="flags">
+          <span class="flag ok">Sushi is dairy-free · No nut risk in standard nigiri</span>
+          <span class="flag star">August peak uni: order whatever they recommend without asking the price first</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">16:00</div>
+      <div class="b-body">
+        <div class="b-name">Canal de Otaru + Cata de Sake</div>
+        <div class="b-sub">小樽運河 + 田中酒造 · Tarde</div>
+        <div class="b-desc">Walk the full length of the canal (20 min) — the afternoon light on the stone warehouses is good. Then <strong>Tanakashuzou Brewery</strong> (operating since 1899): tasting room with 4–6 different sakes including Otaru-specific junmai and seasonal releases. No reservation needed. The building is worth seeing: a working Meiji warehouse still doing what it was built for.</div>
+        <div class="flags"><span class="flag ok">Sake: dairy-free · no nut risk</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">19:00</div>
+      <div class="b-body">
+        <div class="b-name">🍽️ Sugerencia cena + Regreso a Sapporo</div>
+        <div class="b-sub">Cena ligera en Otaru o Sapporo · Jingisukan</div>
+        <div class="b-desc">Either dinner in Otaru before the train, or take the train back and eat Jingisukan (Hokkaido mutton BBQ) in Susukino. <strong>Daruma</strong> in Susukino for authentic Jingisukan — cast-iron dome pans, lamb, local beer. Last train from Otaru ~23:00.</div>
+        <div class="flags">
+          <span class="flag ok">FSec: Jingisukan (cordero a la plancha) — sin frutos secos · seguro</span>
+          <span class="flag ok">LÁCT: no dairy in mutton BBQ or cooking process</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d2')">← Día 2</button><button onclick="showPanel('d4')">Día 4 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 4 ════════════ -->
+<div class="panel" id="panel-d4">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 4 de 10</div>
+    <div class="dh-date">Domingo, 16 de agosto</div>
+    <div class="dh-cities"><span class="city-pill hok">Shakotan Peninsula</span></div>
+    <div class="dh-summary">The wild day. Shakotan is the coastal, remote side of Hokkaido — sea cliffs, fishing villages, cobalt water so clear you can see the white rock 10 metres below. The day requires an early start because the uni bowl at Osyokujidokoro Misaki serves only 20 portions per day, and it's the best sea urchin you'll eat on this trip. This is one of two days worth a genuinely early wake-up: arrive by 09:30–10:00 to secure a bowl. The rest of the day — Nikka Whisky, Cape Kamui, Costa Shimamui — flows at your pace. Important: you must be back in Sapporo by 18:00 because tomorrow's flight to Osaka departs at 08:00.</div>
+  </div>
+  <div class="dh-climate">Shakotan 16 Ago<br>22–26°C · Viento en cabos<br>Cómodo · Costa<br><br>⚠ Salida temprana necesaria<br>Regresar Sapporo antes 18:00<br>Vuelo mañana 08:00</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Rental car · Yoichi Station</strong></td><td>Times Car Rental · timescar.jp · or Orix online</td><td>August Saturday = peak · Book 4–6 weeks ahead · 4-person auto</td></tr>
+        <tr><td>Osyokujidokoro Misaki (uni bowl)</td><td>No reservations taken · arrive early</td><td>20 bowls/day · arrive by 10:00 at latest · 0135-44-3617 for info only</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tr-card">
+    <div class="tr-from">Sapporo Station</div>
+    <div class="tr-mid">JR a Yoichi → Coche de alquiler → Ruta 229</div>
+    <div class="tr-to">Cape Kamui · Shakotan</div>
+    <div class="tr-badge">JR 1h + 1.5h drive</div>
+    <div class="tr-detail">JR salida ~07:30 · Llegada Yoichi ~08:30 · Recoger coche · Conducir Ruta 229 hacia el sur · Regresar a Sapporo antes de las 18:00 · ~2h de regreso</div>
+  </div>
+
+  <div class="slabel">Programa del día — ⚠ Early start required for uni</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">07:30</div>
+      <div class="b-body">
+        <div class="b-name">JR a Yoichi + recogida del coche</div>
+        <div class="b-sub">余市駅 · 1 hora desde Sapporo · Alquiler al llegar</div>
+        <div class="b-desc">This is one of the two days worth an early start. The JR from Sapporo to Yoichi takes 1 hour; with car pickup, you're driving by 09:00. Nikka Distillery is 5 minutes from the station and opens at 09:00. <strong>This timing is essential to reach the uni restaurant before the 20 bowls sell out.</strong> Pre-book the rental car online — August Saturdays in Hokkaido are heavily booked.</div>
+        <div class="flags"><span class="flag early">⚠ Early wake-up justified: 20 uni bowls/day · first-come first-served</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">09:00</div>
+      <div class="b-body">
+        <div class="b-name">Destilería Nikka Whisky</div>
+        <div class="b-sub">ニッカウヰスキー余市蒸溜所 · Abre 09:00 · Entrada gratuita · 1 hora</div>
+        <div class="b-desc">The birthplace of Japanese whisky, established 1934 by Masataka Taketsuru after training in Scotland. He chose Yoichi because its cool, damp climate resembled the Scottish Highlands. <strong>Red-brick Victorian buildings</strong> around an open courtyard: pot stills, kiln houses, warehouses. The museum documents the full story. The shop sells distillery-exclusive single malts unavailable elsewhere. Self-exploration has no language barrier. 1 hour, then drive south immediately.</div>
+        <div class="flags"><span class="flag ok">Whisky: dairy-free · no nut risk</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">10:00</div>
+      <div class="b-body">
+        <div class="b-name">⚠ Uni Bowl — <em>Osyokujidokoro Misaki</em></div>
+        <div class="b-sub">お食事処みさき · Cape Kamui area · 20 bowls/day · June–August only</div>
+        <div class="b-desc">The most important meal of the Hokkaido leg. Run by a local fisherman since 1973, open only in summer, serving only 20 uni bowls per day. Two types: <strong>aka-uni</strong> (bafun-uni, deep orange, richer, more complex) and <strong>shiro-uni</strong> (murasaki-uni, yellowish, sweeter). Split two of each across the group. Cash only, no English menu — point at what others have, or say "aka" and "shiro." Arrive by 10:00 or accept a queue. <strong>August is the last month of the season.</strong>
+        <div class="b-backup"><strong>Backup if bowls sell out:</strong> Drive 5 min to <strong>Bikuni Fishing Port</strong> — several fisherman-run seafood huts along the road serve fresh uni, scallops, and squid grilled on the spot. Lower ceremony, no reservation, genuinely local. A fine consolation and still outstanding. Alternatively, the Shakotan tourism centre near Cape Ogon has a small restaurant serving uni-don with slightly less fanfare but similar quality in August.</div>
+        </div>
+        <div class="flags">
+          <span class="flag ok">Pure sea urchin on rice · safe for both travelers</span>
+          <span class="flag star">August = peak season · last month · the best uni you will eat</span>
+          <span class="flag note">Cash only · 20 bowls/day · arrive by 10:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">11:30</div>
+      <div class="b-body">
+        <div class="b-name">Cabo Kamui — <em>El paseo por la cresta</em></div>
+        <div class="b-sub">神威岬 · Sendero Chalenka · 40 min ida y vuelta</div>
+        <div class="b-desc">Park the car and walk the 770m Chalenka Trail to the tip of the cape along a narrow ridge. Wind hits from both sides. The Shakotan Blue is visible from every angle: cobalt water, white rock visible through it 10 metres below. <strong>Kamui Rock</strong> rises from the sea at the tip — a single dramatic formation. The Cape Kamui Lighthouse at the end. No hiking ability required; a paved path with railings.</div>
+        <div class="flags"><span class="flag note">August: warm · can be windy · light shoes sufficient</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">13:30</div>
+      <div class="b-body">
+        <div class="b-name">Costa Shimamui</div>
+        <div class="b-sub">島武意海岸 · Entre las 100 mejores playas de Japón · 20 min desde Cabo Kamui</div>
+        <div class="b-desc">Drive 20 minutes south. Enter through a short tunnel and emerge above a dramatic coastal scene — sea cliffs, violet-blue water, zero infrastructure. The contrast between the dark tunnel and the sudden blue is genuinely startling. No beach bar, no chairs, no vendors. Just the sea. Walk down to the shore if conditions allow. 45 minutes here is enough; it either speaks to you or it doesn't.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">15:30</div>
+      <div class="b-body">
+        <div class="b-name">Regreso en coche a Sapporo</div>
+        <div class="b-sub">Route 229 + expressway · ~2h · Return car at Yoichi or Sapporo</div>
+        <div class="b-desc"><strong>Must be back in Sapporo by 18:00</strong> — early flight to Osaka tomorrow (CTS 08:00). Return rental car at Yoichi Station or a Sapporo depot if available. Light dinner near hotel — tomorrow requires a 06:00 departure. Tonight is for packing, not restaurants.</div>
+        <div class="flags"><span class="flag note">Tonight: konbini dinner acceptable · rest matters · set two alarms</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d3')">← Día 3</button><button onclick="showPanel('d5')">Día 5 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 5 ════════════ -->
+<div class="panel" id="panel-d5">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 5 de 10</div>
+    <div class="dh-date">Lunes, 17 de agosto</div>
+    <div class="dh-cities"><span class="city-pill hok">Sapporo</span> → <span class="city-pill osa">Osaka</span></div>
+    <div class="dh-summary">Early flight south — the climate shift is immediate and dramatic. Hokkaido was cool and unhurried; Osaka is 34°C and running at a different frequency entirely. Land at Itami by 10:00, in the city by 11:00. The day has two gears: morning energy in the markets (Kuromon is at its best before 13:00), afternoon atmosphere in Shinsekai and Hozenji, and an important dinner reservation in the evening. Osaka rewards directness — no planning required once you're on the street. The city tells you where to go.</div>
+  </div>
+  <div class="dh-climate">Osaka 17 Ago<br>34–37°C · Humedad muy alta<br>Planear descanso interior 13–16h<br><br>Vuelo CTS→ITM 08:00<br>Llegada ~10:00 · Ciudad a las 11:00</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>CTS→ITM Flight · NH772 or JL2000</strong></td><td>ana.co.jp · jal.co.jp</td><td>08:00 departure · Book immediately · Sunday Aug peak</td></tr>
+        <tr><td><strong>Fine dining dinner · Mizai ★★ or Hajime ★★★</strong></td><td>Restaurant websites · tableall.com</td><td>~¥25,000–45,000pp · Book months ahead</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tr-card">
+    <div class="tr-from">CTS · New Chitose</div>
+    <div class="tr-mid">NH772 (ANA) or JL2000 (JAL) · 2h</div>
+    <div class="tr-to">ITM · Osaka Itami</div>
+    <div class="tr-badge">Salida 08:00</div>
+    <div class="tr-detail">Salir hotel Sapporo 06:00 · JR Airport Express 37 min · Facturación doméstica en CTS 60 min antes · Llegada ITM ~10:00 · Autobús lanzadera a Osaka/Namba: ¥650 · 25 min · En la ciudad a las 11:00</div>
+  </div>
+
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">06:00</div>
+      <div class="b-body">
+        <div class="b-name">Depart hotel · JR to airport</div>
+        <div class="b-sub">Early departure · Required for 08:00 flight</div>
+        <div class="b-desc">The only unavoidable early start with no special upside — purely logistical. Leave hotel by 06:00, JR Rapid Airport Express from Sapporo Station to New Chitose: 37 minutes. Domestic check-in is fast. Konbini breakfast at the airport. This is the price of the Shakotan structure — accept it and sleep on the plane.</div>
+        <div class="flags"><span class="flag note">Konbini onigiri for breakfast · sleep on the 2h flight · arrive refreshed</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">11:00</div>
+      <div class="b-body">
+        <div class="b-name">Mercado Kuromon Ichiba</div>
+        <div class="b-sub">黒門市場 · Abre desde las 09:00 · Mejor antes de las 13:00</div>
+        <div class="b-desc">Osaka's 200-year-old food market: 170 stalls of fresh seafood, Wagyu beef, tofu, and street food. Walk the full length eating as you go: <strong>fresh oysters on ice, grilled scallops on a stick, fugu sashimi, fresh-made tamagoyaki</strong>. Not a tourist trap — professional chefs shop here. The pace is faster and louder than any Hokkaido market. This is unmistakably Osaka.</div>
+        <div class="flags">
+          <span class="flag ok">FSec: Marisco y ostras a la plancha — sin frutos secos · seguro</span>
+          <span class="flag ok">LÁCT: grilled seafood and oysters are dairy-free</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">13:00</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Kushikatsu · Daruma</em></div>
+        <div class="b-sub">だるま · Dotonbori area · Breaded skewers</div>
+        <div class="b-desc"><strong>Daruma Kushikatsu</strong>: Osaka's definitive kushikatsu — breaded and deep-fried skewers of beef, seafood, and vegetables in the lightest batter. Order at the counter continuously, dip once in the communal sauce (double-dipping is seriously prohibited). The beef skewer, lotus root, and shrimp are essential first orders. Counter seating, chaotic, completely Osaka.</div>
+        <div class="flags">
+          <span class="flag warn">FSec: ask if frying oil contains peanuts: ピーナッツオイルは使っていますか · vegetable oil is standard</span>
+          <span class="flag ok">LÁCT: batter and dipping sauce are dairy-free</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">16:00</div>
+      <div class="b-body">
+        <div class="b-name">Shinsekai</div>
+        <div class="b-sub">新世界 · 1912 · Barrio obrero intacto</div>
+        <div class="b-desc">Built in 1912 as an amusement district modelled on Paris and New York, then left to evolve on its own. Retro signage, blowfish restaurants, old men playing shogi on the street, the <strong>Tsutenkaku Tower</strong> at the centre (a 1956 structure that looks exactly like it sounds). No attractions required — walk it, absorb it. The best of Osaka is in what it never tried to become.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">18:00</div>
+      <div class="b-body">
+        <div class="b-name">Hozenji Yokocho</div>
+        <div class="b-sub">法善寺横丁 · Callejón cubierto de musgo · Atmósfera de los años 30</div>
+        <div class="b-desc">A narrow stone-paved alley behind Dotonbori, unchanged since the 1930s. <strong>Hozenji Temple</strong> at one end: a tiny shrine with a moss-covered stone Fudo statue, always damp from water poured as offering. The alley restaurants serve Osaka-style kappo in wooden buildings lit by paper lanterns. 20 minutes here is enough to understand why this city endures.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">20:00</div>
+      <div class="b-body">
+        <div class="b-name">🍽️ Sugerencia de cena — <em>Mizai ★★ or Hajime ★★★</em></div>
+        <div class="b-sub">Fine dining Osaka · Book months ahead · ~¥25,000–45,000pp</div>
+        <div class="b-desc"><strong>Mizai</strong> (水嵐, 2 stars): kaiseki using Osaka's own ingredient traditions — Naniwa vegetables, Osaka bay seafood, exceptional value relative to its Michelin level. <strong>Hajime</strong> (はじめ, 3 stars): French-Japanese fusion, spectacular tasting menu, one of Japan's most creative kitchens. Both require booking months in advance for August. Whichever you secure is an extraordinary meal.</div>
+        <div class="flags">
+          <span class="flag warn">LÁCT: kaiseki and French-Japanese often use butter and cream · inform at booking: 乳製品アレルギーがいます</span>
+          <span class="flag warn">FSec: dessert courses sometimes contain walnuts/chestnuts · specify allergy at booking: ナッツアレルギーがいます</span>
+          <span class="flag star">Book immediately · August fills 2–3 months out</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d4')">← Día 4</button><button onclick="showPanel('d6')">Día 6 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 6 ════════════ -->
+<div class="panel" id="panel-d6">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 6 de 10</div>
+    <div class="dh-date">Martes, 18 de agosto</div>
+    <div class="dh-cities"><span class="city-pill osa">Osaka</span></div>
+    <div class="dh-summary">Full Osaka day — the city's most interesting sides, without any of the obvious tourist circuit. The morning goes to Nakazakicho, the neighbourhood that best represents what Osaka actually is: old wooden machiya houses converted into galleries, concept stores, and coffee shops, with a creative class that chose this city deliberately. Lunch is okonomiyaki — non-negotiable. The afternoon divides between Shinsaibashi's craft shops and Tsuruhashi's labyrinthine Korean market. Dinner is yakiniku done properly: charcoal, premium Wagyu, a counter with no theatre.</div>
+  </div>
+  <div class="dh-climate">Osaka 18 Ago<br>34–37°C · Humedad muy alta<br>Mejor al aire libre: mañana + tarde<br>Planear descanso interior 13–16h</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Yakiniku dinner · Nishimura or similar</strong></td><td>Restaurant website or Tableall</td><td>Reserve 1–2 weeks ahead · counter seating · intimate</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">09:00</div>
+      <div class="b-body">
+        <div class="b-name">Nakazakicho — <em>El barrio auténtico de Osaka</em></div>
+        <div class="b-sub">中崎町 · Machiya conservadas · Diseño independiente</div>
+        <div class="b-desc">The neighbourhood that survived Osaka's wholesale redevelopment. Old wooden townhouses converted into galleries, concept stores, vintage furniture shops, and independent coffee. The most design-intelligent neighbourhood in Osaka — walk freely: multiple ceramics galleries, small bookshops, a vinyl record dealer in a converted tatami room. Coffee at <strong>Café Absinthe</strong> for the interior alone. Nothing here needs a map; discovery is the point.</div>
+        <div class="flags"><span class="flag note">Subway: Tanimachi 6-chome · 15 min from Namba</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">12:30</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Okonomiyaki · Chibo</em></div>
+        <div class="b-sub">千房 · Dotonbori flagship · Osaka's signature dish</div>
+        <div class="b-desc"><strong>Chibo</strong>: Osaka-style okonomiyaki — a thick savoury pancake of cabbage, egg, pork belly, and toppings cooked on a teppan grill at your table. Osaka-style is thick and substantial; very different from Hiroshima-style. Order the standard pork and the seafood. Watch the grill operator once, then do it yourself for the second pancake. Street takoyaki after, from any of the Dotonbori stalls.</div>
+        <div class="flags">
+          <span class="flag warn">FSec: okonomiyaki sauce — confirm no nut-based ingredients</span>
+          <span class="flag ok">LÁCT: pancake batter and sauce are dairy-free</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">14:30</div>
+      <div class="b-body">
+        <div class="b-name">Shinsaibashi — <em>Compras de artesanía y diseño</em></div>
+        <div class="b-sub">心斎橋 · Marcas japonesas independientes · No grandes lujos</div>
+        <div class="b-desc">Ignore the luxury flagships on the main covered arcade and focus on the side streets: <strong>Minä Perhonen</strong> (Finnish-Japanese textile brand, Osaka flagship — bags, fabric, small objects); <strong>Kohchosai Kosuga</strong> (lacquerware and bamboo craft); <strong>Hacoa</strong> (precision wooden objects); a kappo kitchen tool shop on the side streets selling single-bevel knives and copper pans. The arcade itself has one excellent ceramics dealer on the south end — look for the handmade tea bowls in the window.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">17:00</div>
+      <div class="b-body">
+        <div class="b-name">Tsuruhashi — <em>El Barrio Coreano de Osaka</em></div>
+        <div class="b-sub">鶴橋 · Laberinto de mercado cubierto de posguerra</div>
+        <div class="b-desc">A covered market area of several thousand stalls operating since the postwar era — Korean groceries, kimchi vendors, yakiniku restaurants. Walk the labyrinthine alleys (easy to get gloriously lost) and buy: Korean pickles, dried chilli, sesame oil, fresh tofu, and whatever looks right. The yakiniku restaurants here are among the best in Japan for quality relative to price.</div>
+        <div class="flags">
+          <span class="flag ok">FSec: El sésamo no es un fruto seco — sin restricción para este viajero</span>
+          <span class="flag ok">LÁCT: kimchi and most Korean side dishes are dairy-free</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">20:00</div>
+      <div class="b-body">
+        <div class="b-name">🍽️ Sugerencia de cena — <em>Yakiniku · Premium Wagyu</em></div>
+        <div class="b-sub">Shinsaibashi or Namba · Counter yakiniku · Charcoal</div>
+        <div class="b-desc"><strong>Yakiniku Nishimura</strong> (西村) in Shinsaibashi: small counter-style yakiniku with premium Wagyu sourced from across Japan — fatty short rib, tongue, sirloin over charcoal at the table. No theatrical presentation, just outstanding meat. Reserve ahead. Alternatively: <strong>Yakiniku Jumbo Namba</strong> for a larger, more accessible operation with similar quality.</div>
+        <div class="flags">
+          <span class="flag ok">FSec: La carne de Wagyu y la parrilla no contienen frutos secos — seguro</span>
+          <span class="flag ok">LÁCT: Wagyu and cooking process are dairy-free</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d5')">← Día 5</button><button onclick="showPanel('d7')">Día 7 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 7 ════════════ -->
+<div class="panel" id="panel-d7">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 7 de 10</div>
+    <div class="dh-date">Miércoles, 19 de agosto</div>
+    <div class="dh-cities"><span class="city-pill osa">Osaka</span> → <span class="city-pill kan">Kanazawa</span></div>
+    <div class="dh-summary">A full Osaka morning before a comfortable afternoon train north. The day starts at Sumiyoshi Taisha — one of Japan's oldest shrines, built in a style that predates Chinese influence and entirely unlike anything in Kyoto. Lunch is fast and local. The afternoon is for Osaka's America Village and Horie district before catching the 16:30 Thunderbird from Osaka Station. You arrive in Kanazawa at 18:50 with the evening ahead: Higashi Chaya al anochecer when the tour groups have gone, and the most important dinner reservation of the Kanazawa leg.</div>
+  </div>
+  <div class="dh-climate">Osaka → Kanazawa<br>Osaka: 34°C · húmedo<br>Kanazawa: 30°C · manejable<br><br>Thunderbird 16:30<br>Transbordo Tsuruga<br>Llegada Kanazawa 18:50</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Komatsu Yasuke · Dinner · Kanazawa</strong></td><td>Tel: 076-256-1218 · Japanese-language call</td><td>Book months ahead · evening seatings only · ~¥30,000pp</td></tr>
+        <tr><td>Thunderbird + Shinkansen seats</td><td>Any JR station or JR Pass office</td><td>Reserve seats · covered by JR Pass · Green Car recommended</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tr-card">
+    <div class="tr-from">Estación de Osaka (Vías 10–12)</div>
+    <div class="tr-mid">Thunderbird → Tsuruga → Shinkansen Hokuriku</div>
+    <div class="tr-to">Estación de Kanazawa</div>
+    <div class="tr-badge">Salida 16:30 · Llegada 18:50</div>
+    <div class="tr-detail">Thunderbird a Tsuruga (~80 min) · Transbordo misma plataforma · Shinkansen Hokuriku a Kanazawa (~50 min) · Total ~2h 20min · ¥9.410 · Cubierto por JR Pass · Vale la pena el coche Verde</div>
+  </div>
+
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">09:00</div>
+      <div class="b-body">
+        <div class="b-name">Santuario Sumiyoshi Taisha</div>
+        <div class="b-sub">住吉大社 · El santuario Sumiyoshi más antiguo de Japón · 20 min de Namba</div>
+        <div class="b-desc">One of Japan's three most important Shinto shrines, built in a style that predates Chinese architectural influence — straight rooflines, unpainted cedar, structurally primordial. Radically different from anything in Kyoto. The <strong>arched stone bridge over the pond</strong> is the shrine's symbol. Almost no foreign tourists. 30–40 minutes: walk the grounds, cross the bridge, buy an omamori (protective charm) from the office. A genuinely ancient place that hasn't been reconstructed for tourism.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">11:00</div>
+      <div class="b-body">
+        <div class="b-name">Ura Namba — <em>Café + paseo por el barrio</em></div>
+        <div class="b-sub">裏なんば · Behind the tourist street · Local morning Osaka</div>
+        <div class="b-desc">The streets immediately behind Dotonbori — quieter, more local, the actual morning texture of Osaka. <strong>Streamer Coffee</strong> or <strong>Onibus Coffee Namba</strong> for a proper espresso. Watch the city wake up: restaurant owners hosing their frontage, early deliveries, the sounds of preparation. This is the Osaka that doesn't photograph well but feels completely real.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">12:30</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Standing sushi · Harukoma</em></div>
+        <div class="b-sub">春駒 · Tenjinbashi · ¥100–200/piece · Locals only</div>
+        <div class="b-desc"><strong>Harukoma Sushi</strong> (春駒) at Tenjinbashi: standing sushi counter, ¥100–200 per piece, extraordinary value, entirely local clientele. Order continuously, eat standing up, pay when you leave. 20 minutes and you've had one of the best lunches of the trip at a fraction of any restaurant cost. Or: <strong>Kinryu Ramen</strong> on Dotonbori if you want something warmer.</div>
+        <div class="flags">
+          <span class="flag ok">Standing sushi: dairy-free · no nut risk in standard nigiri</span>
+          <span class="flag ok">FSec: El ramen no contiene frutos secos — seguro</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">14:00</div>
+      <div class="b-body">
+        <div class="b-name">Amerika-mura + Horie</div>
+        <div class="b-sub">アメリカ村 → 堀江 · Independent fashion + design · 1h</div>
+        <div class="b-desc"><strong>Amerika-mura</strong>: Osaka's independent street fashion district — vintage and Japanese streetwear that developed its own aesthetic independently of Tokio. Interesting for the energy and density. Walk 10 minutes to <strong>Horie</strong>: the most design-conscious neighbourhood in Osaka, home to independent furniture designers and concept stores. <strong>Fredy & Gloster</strong> for Japanese workwear-influenced design; several architecture studios with shop fronts worth looking at.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">16:00</div>
+      <div class="b-body">
+        <div class="b-name">Osaka Station · Thunderbird to Kanazawa</div>
+        <div class="b-sub">Depart 16:30 · Green Car · Transbordo Tsuruga</div>
+        <div class="b-desc">Board the <strong>Thunderbird Limited Express</strong> at Osaka Station. Green Car seats are significantly more comfortable — upgrade is worth it on a 2h+ journey. The Tsuruga transfer is one of Japan's simplest: follow signs to the Hokuriku Shinkansen platform, same level, connection is immediate. Shinkansen to Kanazawa: mountain scenery, sea glimpses, 50 minutes. <strong>Llegada Kanazawa 18:50.</strong></div>
+        <div class="flags">
+          <span class="flag note">JR Pass covers both legs · Reserve seats at any JR office · Green Car: +¥2,000–3,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">19:00</div>
+      <div class="b-body">
+        <div class="b-name">Higashi Chaya al anochecer</div>
+        <div class="b-sub">東茶屋街 · 15 min en taxi desde la estación</div>
+        <div class="b-desc">Taxi directly to Higashi Chaya after checking in. At this hour the day-trippers have left and the ochaya (teahouses) are lit from inside. The atmosphere of a functioning geisha quarter becomes visible at dusk — you may hear shamisen through a wooden shutter. The craft shops are closed but the street itself is the point. Walk it twice; the second pass reveals details the first misses.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">20:30</div>
+      <div class="b-body">
+        <div class="b-name">🍽️ Sugerencia de cena — <em>Komatsu Yasuke</em></div>
+        <div class="b-sub">こまつ弥助 · Sea of Japan sushi · ~¥30,000pp · Reserve months ahead</div>
+        <div class="b-desc">The 93-year-old master Kazuo Morita — described as "the Jiro of the Sea of Japan." Sushi using fish from the Sea of Japan: <strong>nodoguro</strong> (blackthroat seaperch — the prized fish of this coast, rich and oily), sweet shrimp, yellowtail, summer rock oysters. A completely different vocabulary from Tokio or Hokkaido sushi. Small counter, intimate, English-friendly staff. One of the finest sushi experiences in Japan.</div>
+        <div class="flags">
+          <span class="flag ok">LÁCT: sushi is dairy-free</span>
+          <span class="flag warn">FSec: confirm no nut garnishes on specials at time of booking</span>
+          <span class="flag star">Book immediately · 076-256-1218 · evenings only · months wait</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d6')">← Día 6</button><button onclick="showPanel('d8')">Día 8 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 8 ════════════ -->
+<div class="panel" id="panel-d8">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 8 de 10</div>
+    <div class="dh-date">Jueves, 20 de agosto</div>
+    <div class="dh-cities"><span class="city-pill kan">Kanazawa</span></div>
+    <div class="dh-summary">The most structured day of the trip — and the richest for craft and design. Kenroku-en at 08:00 when entry is free and the garden is yours. Omicho Market for breakfast among the stalls. The Museo Nacional de Artesanía, then a gold-leaf workshop where you apply real 24-karat gold to a lacquer object you take home. The Museo de Arte Contemporáneo del Siglo XXI — one of the best museum buildings in Japan — fills the heat of the early afternoon. Kutani ceramics shopping and the samurai district in the late afternoon. The evening ends at a standing oden bar in Katamachi, the most local and least theatrical experience of the entire Kanazawa stay.</div>
+  </div>
+  <div class="dh-climate">Kanazawa 20 Ago<br>30–33°C · Húmedo<br>Mejor temprano y al atardecer<br>Museo ideal para el calor 13–16h</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Gold Leaf Workshop · Sakuda</strong></td><td>hakuza.co.jp</td><td>90 min · ~¥4,000pp · English available · book 2–3 weeks ahead</td></tr>
+        <tr><td>Museo de Arte Contemporáneo del Siglo XXI</td><td>kanazawa21.jp</td><td>Some installations require timed entry · buy tickets in advance</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">08:00</div>
+      <div class="b-body">
+        <div class="b-name">Kenroku-en — <em>Entrada gratuita antes de las 08:00 en verano</em></div>
+        <div class="b-sub">兼六園 · Uno de los tres grandes jardines de Japón · Gratis hasta las 08:00</div>
+        <div class="b-desc">One of Japan's three canonical strolling gardens (with Korakuen and Kairakuen). <strong>Enter at 07:00 or 07:30</strong> (summer opening) and have the garden to yourselves for an hour before the tour buses arrive at 08:30. The light on the ponds in early morning is extraordinary. Walk the full circuit, cross the bridges, sit at the main Kasumigaike pond. The stone lantern reflected in still water is the garden's most photographed composition — and at this hour, it's yours alone.</div>
+        <div class="flags">
+          <span class="flag note">Free entry until 08:00 in summer · After 08:00: ¥320pp · Opens 07:00 August</span>
+          <span class="flag early">Early entry is the justification for the early wake-up · absolutely worth it</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">09:00</div>
+      <div class="b-body">
+        <div class="b-name">Mercado Omicho — <em>Desayuno</em></div>
+        <div class="b-sub">近江町市場 · En funcionamiento desde el período Edo · Especialidades de agosto</div>
+        <div class="b-desc">15-minute walk from Kenroku-en. 170+ stalls of fresh Sea of Japan seafood, Noto vegetables, local tofu. <strong>August specialties: iwagaki rock oysters</strong> (enormous summer oysters from Noto, served raw on ice — completely different from small winter oysters), sweet shrimp, yellowtail. Breakfast kaisendon at one of the counter restaurants inside. The covered market building, operating since the 18th century, is worth studying as architecture.</div>
+        <div class="flags">
+          <span class="flag ok">Rock oysters and seafood kaisendon: dairy-free · no nut risk</span>
+          <span class="flag star">Iwagaki oysters: summer-only seasonal. Order immediately.</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">10:30</div>
+      <div class="b-body">
+        <div class="b-name">Museo Nacional de Artesanía</div>
+        <div class="b-sub">国立工芸館 · Colección nacional de Japón · Trasladada desde Tokio en 2020</div>
+        <div class="b-desc">Japan's entire national craft collection — relocated from Tokio to Kanazawa in 2020, a statement that this city is the country's craft capital. Lacquerware, Kutani ceramics, Kaga Yuzen silk dyeing, metalwork, bamboo objects of extraordinary refinement. Housed in two <strong>converted Meiji-era military buildings</strong> joined by a contemporary connector. The architecture is as interesting as the collection. 90 minutes minimum.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">12:00</div>
+      <div class="b-body">
+        <div class="b-name">Taller de Hoja de Oro — <em>Sakuda</em></div>
+        <div class="b-sub">Hakuza · 90 min · Hoja de oro 24k · Haces y te llevas el objeto</div>
+        <div class="b-desc">Kanazawa produces 99% of Japan's gold leaf. At Sakuda's workshop, a craftsperson teaches the application process: real 24-karat gold leaf, thinner than a human hair, applied to a lacquer plate or box using a bamboo brush — with breath held. The process requires genuine attention and produces a genuinely beautiful object. <strong>The most Japan-specific souvenir of the entire trip.</strong></div>
+        <div class="flags"><span class="flag note">Book: hakuza.co.jp · ¥3,000–5,000pp · English staff · 90 min · near Higashi Chaya</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">14:30</div>
+      <div class="b-body">
+        <div class="b-name">Museo de Arte Contemporáneo del Siglo XXI</div>
+        <div class="b-sub">金沢21世紀美術館 · SANAA · Aire acondicionado</div>
+        <div class="b-desc">Designed by Kazuyo Sejima and Ryue Nishizawa (SANAA) in 2004: a circular, transparent building with no front or back. Permanent installations: <strong>James Turrell's Blue Planet Sky</strong> (a square hole in the ceiling open to the sky, the light shifting over an hour), <strong>Leandro Erlich's Swimming Pool</strong> (you look through glass at people apparently standing in an empty pool below you — one of the best single art experiences in Japan), and rotating contemporary shows. The building itself is a work. Air-conditioned escape from August heat: ideal timing.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">17:00</div>
+      <div class="b-body">
+        <div class="b-name">Cerámica Kutani + Nagamachi</div>
+        <div class="b-sub">Centro de Productos de Ishikawa · Mejor selección de Kutani · Barrio samurái cercano</div>
+        <div class="b-desc"><strong>Ishikawa Local Products Center</strong>: the most curated selection of Kutani ceramics in the city — bold five-color overglaze enamel on white porcelain, dense and unapologetically decorative. Individual tea cups (¥3,000–8,000) are the right scale. Then 10-minute walk to <strong>Nagamachi Samurai District</strong>: earthen walls, winding alleys, and the <strong>Nomura Samurai House</strong> — beautifully preserved interior with a garden of deliberate asymmetry.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">20:00</div>
+      <div class="b-body">
+        <div class="b-name">🍽️ Sugerencia de cena — <em>Oden de Kanazawa · Katamachi</em></div>
+        <div class="b-sub">おでん · Bar de pie · La experiencia local más auténtica de Kanazawa</div>
+        <div class="b-desc">Kanazawa eats oden year-round — unlike anywhere else in Japan. Standing oden bars in Katamachi: crab meatballs, burdock fish-paste rolls, local tofu, konnyaku in kombu dashi broth. <strong>Oden Miyuki</strong> or <strong>Otomiya</strong> — counter seating, no English menu, point at items in the pot. Local sake alongside. Then sake bar hopping on Katamachi's back streets. This is the most local and least theatrical food experience of the Kanazawa stay — which makes it the best.</div>
+        <div class="flags">
+          <span class="flag ok">LÁCT: oden broth is dairy-free · all standard ingredients dairy-free</span>
+          <span class="flag ok">FSec: El oden (caldo de kombu, tofu, pescado) no contiene frutos secos — seguro</span>
+          <span class="flag star">Most authentic Kanazawa experience · nothing like it elsewhere in Japan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d7')">← Día 7</button><button onclick="showPanel('d9')">Día 9 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 9 ════════════ -->
+<div class="panel" id="panel-d9">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 9 de 10</div>
+    <div class="dh-date">Viernes, 21 de agosto</div>
+    <div class="dh-cities"><span class="city-pill kan">Kanazawa</span> → <span class="city-pill tok">Tokio</span></div>
+    <div class="dh-summary">A quick morning in Kanazawa for last craft shopping, then the Kagayaki Shinkansen south: 2 hours 28 minutes to Tokio, scenic mountain passage through Nagano. Arrive Tokio at 12:30 and the afternoon is the dedicated shopping day — Map Camera in Shinjuku, Cibone and Minä Perhonen in Omotesandō, D&Department and Hikarie in Shibuya, then Uniqlo flagship. A proper evening dinner closes the trip's penultimate day.</div>
+  </div>
+  <div class="dh-climate">Kanazawa → Tokio<br>Kanazawa: 30°C<br>Tokio: 33–35°C · muy húmedo<br><br>Kagayaki 10:00<br>Llegada Tokio 12:28</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Cómo reservar</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Kagayaki Shinkansen seats · 10:00</strong></td><td>JR Pass office · any JR station</td><td>All seats reserved on Kagayaki · reserve when in Japan</td></tr>
+        <tr><td>Dinner · Tokio (optional fine dining)</td><td>tableall.com or direct</td><td>See options below · reserve ahead if targeting specific restaurant</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tr-card">
+    <div class="tr-from">Estación de Kanazawa</div>
+    <div class="tr-mid">Shinkansen Kagayaki かがやき</div>
+    <div class="tr-to">Tokio Station</div>
+    <div class="tr-badge">2h 28min · Salida 10:00</div>
+    <div class="tr-detail">Stops: Toyama · Nagano · Omiya · Tokio · Covered by JR Pass · All seats reserved · Buy ekiben at Estación de Kanazawa concourse before boarding</div>
+  </div>
+
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">08:30</div>
+      <div class="b-body">
+        <div class="b-name">Última mañana en Kanazawa — <em>Higashi Chaya craft shops</em></div>
+        <div class="b-sub">Last shopping · Shops open 09:00</div>
+        <div class="b-desc">Los últimos 90 minutos en Kanazawa. Higashi Chaya district shops open at 09:00: <strong>lacquerware bowls</strong> (Orinui, ¥5,000–15,000), <strong>Kutani sake cups</strong>, <strong>Kaikado tin tea canisters</strong> (made in Kyoto, sold here — among the most refined objects in Japan). Then straight to the station for the 10:00 Kagayaki. Buy lunch bento at the Estación de Kanazawa concourse — the crab and Kaga vegetable bentos are genuinely excellent.</div>
+        <div class="flags">
+          <span class="flag warn">FSec: algunos ekiben contienen nueces o almendras como guarnición · leer etiqueta de ingredientes</span>
+          <span class="flag ok">Crab bento: dairy-free · confirm no nut ingredients</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">10:00</div>
+      <div class="b-body">
+        <div class="b-name">✈ Shinkansen Kagayaki → Tokio</div>
+        <div class="b-sub">かがやき · 2h 28min · Paisaje montañoso</div>
+        <div class="b-desc">The fastest train on the Hokuriku Shinkansen — 260 km/h. Mountain scenery through Nagano, then plains as you approach the capital. Eat the ekiben on the train. Arrive Tokio Station at 12:28. Store bags at coin lockers in Tokio Station B1 (large, easy to find, ¥600–900/bag).</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">13:00</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Tokio Station Ramen Street</em></div>
+        <div class="b-sub">東京ラーメンストリート · B1 · 8 top ramen shops in one corridor</div>
+        <div class="b-desc">Eight of Tokio's best ramen shops concentrated in one basement corridor. Quick, no planning required, no queue at 13:00. <strong>Rokurinsha</strong> (つけ麺) for thick dipping noodles or <strong>Soranoiro</strong> for vegetable-forward broths. Done in 30 minutes, then straight into shopping.</div>
+        <div class="flags">
+          <span class="flag ok">FSec: El ramen no contiene frutos secos — seguro</span>
+          <span class="flag warn">LÁCT: butter-topped options — ask for オムコーンバターなし</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">14:00</div>
+      <div class="b-body">
+        <div class="b-name">Compras — <em>Tarde completa</em></div>
+        <div class="b-sub">Omotesandō → Shibuya → Shinjuku · See route below</div>
+        <div class="b-desc">
+          <strong>Omotesandō (14:00–16:00):</strong> <strong>Cibone</strong> (best curated Japanese design store in Tokio — ceramics, furniture, objects); <strong>Minä Perhonen flagship</strong> (textile design brand, bags and fabric); <strong>Spiral Market</strong> (design bookshop + objects in Aoyama). Check Cibone opening hours — closed Tuesdays, confirm Thursday 21 Ago is open.<br><br>
+          <strong>Shibuya (16:00–17:30):</strong> <strong>Shibuya Hikarie 8F</strong> (Kogei Ippin — the finest department store craft floor in Japan, regional crafts by prefecture); <strong>D&Department Tokio</strong> (long-life design curated by prefecture).<br><br>
+          <strong>Shinjuku (18:00–20:00):</strong> <strong>Map Camera</strong> (3F–5F used cameras — Leica, Fujifilm X100 series, vintage glass, English-speaking staff, they buy back); <strong>Yodobashi Akiba</strong> if you want new electronics in Akihabara instead; <strong>Uniqlo Shinjuku Takashimaya</strong> flagship (3 floors, best stock of the entire Japan trip); <strong>GU Shinjuku</strong> next door for younger cuts.
+        </div>
+        <div class="flags"><span class="flag note">Route: Omotesandō → Shibuya → Shinjuku · all connected by Yamanote Line or subway</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">20:30</div>
+      <div class="b-body">
+        <div class="b-name">🍽️ Sugerencia de cena — <em>Final Tokio meal</em></div>
+        <div class="b-sub">Options at different commitment levels</div>
+        <div class="b-desc"><strong>Standing sushi — Uogashi Nihon-ichi</strong> (魚がし日本一, Shibuya): Tokio's best standing sushi operation — Edomae-style, fast, no reservation, ¥200–400/piece. The right call after a shopping day. Or: <strong>Harutaka</strong> in Ginza (omakase, ¥25,000–35,000, occasionally has cancellations on short notice — check the evening before). The standing sushi option is genuinely excellent and requires nothing from you.</div>
+        <div class="flags">
+          <span class="flag ok">Standing sushi: dairy-free · no nut risk in standard nigiri</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d8')">← Día 8</button><button onclick="showPanel('d10')">Día 10 →</button></div>
+</div></div>
+
+<!-- ════════════ DAY 10 ════════════ -->
+<div class="panel" id="panel-d10">
+<div class="day-hero">
+  <div class="dh-left">
+    <div class="dh-num">Día 10 de 10</div>
+    <div class="dh-date">Sábado, 22 de agosto</div>
+    <div class="dh-cities"><span class="city-pill tok">Tokio · Salida</span></div>
+    <div class="dh-summary">A gentle final morning with no obligations. Yanaka is the right place to end: Edo-era wooden streets, independent shops, temples, a famous cat population, and a pace that asks nothing from you. Cold soba for lunch — light, elegant, the right meal before a long flight. Back to the hotel, collect bags, Keikyu to Haneda. The duty-free at Terminal 3 has Nikka Whisky, Japanese ceramics, and Issey Miyake accessories — final purchases on the way out.</div>
+  </div>
+  <div class="dh-climate">Tokio 22 Ago<br>33–36°C · Muy húmedo<br>Salir hotel 15:30<br>Vuelo 19:00 HND T3</div>
+</div>
+<div class="day-body">
+  <div class="day-res-section">
+    <div class="day-res-title">Para este día</div>
+    <table class="day-res-table">
+      <thead><tr><th>Qué</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Sin reservas necesarias hoy</td><td>Salida day · keep it simple · Yanaka is walk-in · soba is walk-in</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tr-card">
+    <div class="tr-from">Hotel (Shinjuku / Shibuya)</div>
+    <div class="tr-mid">Línea Keikyu Airport desde Shinagawa</div>
+    <div class="tr-to">HND Terminal 3 · Internacional</div>
+    <div class="tr-badge">Salir hotel 15:30</div>
+    <div class="tr-detail">Keikyu desde Shinagawa a T3: 13 min · Aeropuerto a las 16:00–16:30 · Check-in internacional: 2,5h antes = 16:30 en T3 · Vuelo 19:00</div>
+  </div>
+
+  <div class="slabel">Programa del día</div>
+  <div class="blocks">
+    <div class="block">
+      <div class="b-time">09:30</div>
+      <div class="b-body">
+        <div class="b-name">Yanaka — <em>Old Tokio</em></div>
+        <div class="b-sub">谷中 · Calles de la era Edo conservadas · Gatos · Sin turistas</div>
+        <div class="b-desc">The neighbourhood that best preserves pre-war Tokio: wooden temples, old merchants' houses, a cemetery lined with giant camphor trees, the famous cat population. <strong>Yanaka Ginza shopping street</strong>: small independent shops — local ceramics, lacquerware, confectionery, old posters. <strong>Yanaka Coffee</strong> for the final Tokio espresso. No plan needed: walk from Nippori Station, let the alleys take you. 2–3 hours, unhurried, exactly the right pace for a departure day.</div>
+        <div class="flags"><span class="flag note">Nippori Station: Keikyu to Shinagawa then JR Yamanote · 20 min from Shinjuku</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">12:00</div>
+      <div class="b-body">
+        <div class="b-name">🍱 Sugerencia de almuerzo — <em>Cold soba</em></div>
+        <div class="b-sub">Yanaka / Ueno area · Handmade · Simple</div>
+        <div class="b-desc"><strong>Matsushiro-an</strong> or any soba counter near Yanaka: cold zarusoba — buckwheat noodles served on a bamboo tray with cold dashi broth, wasabi, and spring onion. The right meal before a long flight: light, refined, completely Japanese, done in 30 minutes. A fitting final statement.</div>
+        <div class="flags">
+          <span class="flag ok">Soba frío: sin lácteos · sin riesgo de frutos secos · seguro para ambos travelers</span>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">14:00</div>
+      <div class="b-body">
+        <div class="b-name">Hotel · Recoger equipaje · Salir hacia Haneda</div>
+        <div class="b-sub">Keikyu a T3 · 13 min desde Shinagawa</div>
+        <div class="b-desc">Return to hotel by 14:00, check out, collect stored bags. Keikyu Airport Express from Shinagawa: 13 minutes to Haneda T3. Be at the international terminal by <strong>16:30</strong> — 2.5 hours before a 19:00 departure. T3 duty-free: <strong>Nikka Whisky From the Barrel</strong> (best value single malt for export), <strong>Japanese ceramics at the Kyoto Daimaru counter</strong>, <strong>Issey Miyake accessories</strong>.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="b-time">19:00</div>
+      <div class="b-body">
+        <div class="b-name">Salida · HND Terminal 3</div>
+        <div class="b-sub">Fin del viaje</div>
+        <div class="b-desc">Diez días. Tokio, Sapporo, Otaru, Shakotan, Osaka, Kanazawa. El cuenco de uni en el Cabo Kamui. La tempura en Araki. El taller de hoja de oro. El oden en una barra de Katamachi a medianoche. El canal de Otaru al anochecer. Nada de esto se repite.</div>
+      </div>
+    </div>
+  </div>
+  <div class="day-footer"><button onclick="showPanel('d9')">← Día 9</button><button disabled>Fin del viaje</button></div>
+</div></div>
+
+<script>
+const panelMeta = {
+  summary: {label:'Resumen del viaje', color:'rgba(250,248,244,0.4)', cls:'sum'},
+  d1: {label:'D1 · 13 Ago · Tokio → Sapporo', color:'#f0c84a', cls:'tok'},
+  d2: {label:'Día 2 · 14 Ago · Sapporo', color:'#4ab8e0', cls:'hok'},
+  d3: {label:'Día 3 · 15 Ago · Otaru', color:'#4ab8e0', cls:'hok'},
+  d4: {label:'Day 4 · 16 Ago · Shakotan', color:'#4ab8e0', cls:'hok'},
+  d5: {label:'Día 5 · 17 Ago · Osaka', color:'#e0784a', cls:'osa'},
+  d6: {label:'Día 6 · 18 Ago · Osaka', color:'#e0784a', cls:'osa'},
+  d7: {label:'Día 7 · 19 Ago · Kanazawa', color:'#e0784a', cls:'osa'},
+  d8: {label:'Día 8 · 20 Ago · Kanazawa', color:'#78c060', cls:'kan'},
+  d9: {label:'Día 9 · 21 Ago · Tokio', color:'#f0c84a', cls:'tok'},
+  d10:{label:'Day 10 · 22 Ago · Salida', color:'#f0c84a', cls:'tok'}
+};
+
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tn-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.mob-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  const map = {summary:0,d1:1,d2:2,d3:3,d4:4,d5:5,d6:6,d7:7,d8:8,d9:9,d10:10};
+  const btns = document.querySelectorAll('.tn-btn');
+  if (map[id] !== undefined) btns[map[id]].classList.add('active');
+  // Update mobile trigger label
+  const meta = panelMeta[id];
+  if (meta) {
+    const lbl = document.getElementById('mobLabel');
+    const dot = document.getElementById('mobDot');
+    if (lbl) lbl.textContent = meta.label;
+    if (dot) { dot.className = 'mob-trigger-dot'; dot.style.background = meta.color; }
+    // Mark active mob btn
+    const trigger = document.querySelector('.mob-trigger');
+    if (trigger) { trigger.className = 'mob-trigger'; }
+  }
+  // Mark correct mob btn active
+  document.querySelectorAll('.mob-btn').forEach(b => {
+    if (b.getAttribute('onclick') && b.getAttribute('onclick').includes("'" + id + "'")) {
+      b.classList.add('active');
+    }
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleMobMenu() {
+  const dd = document.getElementById('mobDropdown');
+  const trigger = document.getElementById('mobTrigger');
+  const isOpen = dd.classList.contains('open');
+  dd.classList.toggle('open', !isOpen);
+  trigger.classList.toggle('open', !isOpen);
+}
+
+function closeMob() {
+  const dd = document.getElementById('mobDropdown');
+  const trigger = document.getElementById('mobTrigger');
+  dd.classList.remove('open');
+  trigger.classList.remove('open');
+}
+
+// Show/hide correct nav based on screen size
+function handleResize() {
+  const isMob = window.innerWidth <= 768;
+  document.querySelector('.topnav').style.display = isMob ? 'none' : 'flex';
+  document.getElementById('mobNav').style.display = isMob ? 'block' : 'none';
+}
+
+window.addEventListener('resize', handleResize);
+handleResize();
+</script>
+</body>
+</html>
